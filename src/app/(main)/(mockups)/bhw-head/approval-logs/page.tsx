@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Menubar, MenubarContent, MenubarItem, MenubarLabel, MenubarMenu, MenubarSub, MenubarSubContent, MenubarSubTrigger, MenubarTrigger } from "@/components/ui/menubar";
+import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSub, MenubarSubContent, MenubarSubTrigger, MenubarTrigger } from "@/components/ui/menubar";
 import { TooltipComponent } from "@/components/ui/tooltip";
 import { TypographyLarge, TypographySmall } from "@/components/ui/typography";
-import { format } from "date-fns";
-import { ArrowUpDown, CalendarDays, ThumbsUp, Ellipsis, Loader, Settings2, Trash2, ThumbsDown, MessageSquareMore } from "lucide-react";
+import { CalendarDays, ThumbsUp, Ellipsis, Settings2, ThumbsDown, MessageSquareMore } from "lucide-react";
 
 export default function Page() {
     return (
@@ -56,7 +55,7 @@ export default function Page() {
 
                 <div className="[&>*:last-child_.trail]:hidden">
                     {Array.from({ length: 2}).map((_,index) => (
-                        <div className="grid grid-cols-[1.5rem_1fr]">
+                        <div key={index} className="grid grid-cols-[1.5rem_1fr]">
                             <div className="relative flex">
                                 <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10 size-2.5 rounded-full bg-zinc-400"></div>
                                 <div className="absolute top-2 left-1/2 -translate-x-1/2 h-full border-r bg-zinc-300 trail"></div>

@@ -1,5 +1,7 @@
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { TypographySmall } from "@/components/ui/typography";
+import { PenLine, Plus } from "lucide-react";
 
 export default function ProfileDetails() {
     return (
@@ -36,24 +38,28 @@ export default function ProfileDetails() {
                     </CardContent>
                 </Card>
 
-                <Card className="p-3">
+                <Card className="p-3 relative">
                     <CardContent className="px-3">
+                        <Button variant="ghost" className="absolute top-1.5 right-1.5"><Plus /> Add Child</Button>
                         <TypographySmall className="text-muted-foreground">Children</TypographySmall>
 
                         <div className="mt-4">
-                            <div className="">
+                            <div className="relative">
+                                <Button variant="ghost" size="icon" className="size-7 absolute top-1 right-1"><PenLine /></Button>
                                 <TypographySmall>Name:</TypographySmall> <span className="text-muted-foreground">Lorem ipsum</span> <br />
                                 <TypographySmall>Date of Birth:</TypographySmall> <span className="text-muted-foreground">Lorem ipsum</span> <br />
                                 <TypographySmall>Age:</TypographySmall> <span className="text-muted-foreground">2 years old</span> <br />
                             </div>
                             <div className="my-1 border-b border-border"></div>
-                            <div className="">
+                            <div className="relative">
+                                <Button variant="ghost" size="icon" className="size-7 absolute top-1 right-1"><PenLine /></Button>
                                 <TypographySmall>Name:</TypographySmall> <span className="text-muted-foreground">Lorem ipsum</span> <br />
                                 <TypographySmall>Date of Birth:</TypographySmall> <span className="text-muted-foreground">Lorem ipsum</span> <br />
                                 <TypographySmall>Age:</TypographySmall> <span className="text-muted-foreground">2 years old</span> <br />
                             </div>
                             <div className="my-1 border-b border-border"></div>
-                            <div className="">
+                            <div className="relative">
+                                <Button variant="ghost" size="icon" className="size-7 absolute top-1 right-1"><PenLine /></Button>
                                 <TypographySmall>Name:</TypographySmall> <span className="text-muted-foreground">Lorem ipsum</span> <br />
                                 <TypographySmall>Date of Birth:</TypographySmall> <span className="text-muted-foreground">Lorem ipsum</span> <br />
                                 <TypographySmall>Age:</TypographySmall> <span className="text-muted-foreground">2 years old</span> <br />

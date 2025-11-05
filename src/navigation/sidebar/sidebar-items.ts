@@ -33,6 +33,7 @@ import {
     MessageSquareText,
     FileText,
     Layers,
+    GripVertical,
 } from "lucide-react";
 
 export interface NavSubItem {
@@ -132,6 +133,12 @@ export const sidebarItems: NavGroup[] = [
                 title: "Attendance",
                 url: "/bhw-staff/attendance",
                 icon: ClipboardCheck,
+            },
+            {
+                id: "/bhw-staff/vaccine-queue",
+                title: "Vaccine Queue",
+                url: "/bhw-staff/vaccine-queue",
+                icon: Layers,
             },
             {
                 id: "/bhw-staff/vaccine-request",

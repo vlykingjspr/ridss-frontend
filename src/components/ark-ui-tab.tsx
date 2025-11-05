@@ -38,7 +38,7 @@ export function ArkUITabButton({
 		>
 			<Tabs.List className="relative h-full flex text-muted-foreground/80 text-sm font-medium">
 				{children}
-				<Tabs.Indicator className="w-[var(--width)] h-full bg-primary rounded -z-10" />
+				<Tabs.Indicator className="w-[var(--width)] h-full bg-primary rounded-sm" />
 			</Tabs.List>
 		</Tabs.Root>
 	);

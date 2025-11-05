@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { TypographyH3, TypographyLarge, TypographyLead, TypographySmall } from "@/components/ui/typography";
+import { TypographyH1, TypographyH3, TypographyLarge, TypographyLead, TypographySmall } from "@/components/ui/typography";
 
 export default function Page() {
     return (
@@ -29,6 +29,27 @@ export default function Page() {
                             </CardContent>
                         </Card>
                     </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                    <Card className="!p-3 relative cursor-pointer hover:dark:bg-zinc-800 transition duration-150">
+                        <CardContent className="px-1.5 space-y-2">
+                            <div className="text-center">
+                                <TypographySmall>Your Queue Number</TypographySmall>
+
+                                <TypographyH1 className="">21</TypographyH1>
+                            </div>
+                        </CardContent>
+                    </Card>
+                    <Card className="!p-3 relative cursor-pointer hover:dark:bg-zinc-800 transition duration-150">
+                        <CardContent className="px-1.5 space-y-2">
+                            <div className="text-center">
+                                <TypographySmall>Current Serving</TypographySmall>
+
+                                <TypographyH1 className="">5</TypographyH1>
+                            </div>
+                        </CardContent>
+                    </Card>
                 </div>
 
                 <div className="space-y-3">

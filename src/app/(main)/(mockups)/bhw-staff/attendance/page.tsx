@@ -1,3 +1,4 @@
+import SearchInput from "@/components/search-input";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { TypographyLarge, TypographySmall } from "@/components/ui/typography";
@@ -5,10 +6,14 @@ import { ChevronLeft, ChevronRight, Ellipsis } from "lucide-react";
 
 export default function Page() {
     return (
-        <div className="">
+        <div className="max-w-3xl mx-auto">
             <TypographyLarge>Attendance</TypographyLarge>
 
             <div className="mt-6">
+                <div className="max-w-sm w-full mb-4 ml-auto">
+                    <SearchInput className="h-10 w-full rounded-md" placeholder="Search child" />
+                </div>
+
                 <Card className="rounded-md shadow-xs overflow-hidden border-none p-0 gap-0">
                     <div className="h-12 grid grid-cols-[repeat(1,_1fr)_10rem] border-b border-primary bg-primary text-primary-foreground items-center rounded-t-[inherit]">
                         <div className="px-4">
@@ -19,6 +24,16 @@ export default function Page() {
                         </div>
                     </div>
                     <div className="border border-t-0 border-border divide-y divide-border rounded-b-[inherit]">
+                        <div className="h-11 grid grid-cols-[repeat(1,_1fr)_10rem] items-center">
+                            <div className="px-4">
+                                <TypographySmall>John Doe</TypographySmall>
+                            </div>
+                            <div className="px-4 flex items-center justify-center">
+                                <Button className="bg-green-600 h-8">
+                                    <span>Present</span>
+                                </Button>
+                            </div>
+                        </div>
                         <div className="h-11 grid grid-cols-[repeat(1,_1fr)_10rem] items-center">
                             <div className="px-4">
                                 <TypographySmall>John Doe</TypographySmall>

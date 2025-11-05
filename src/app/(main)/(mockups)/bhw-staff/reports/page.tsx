@@ -29,6 +29,27 @@ export default function Page() {
                         Excel Export
                     </Button>
                 </div>
+
+                <div className="mt-5">
+                    <Card className="rounded-md shadow-xs border-none gap-0 p-0">
+                        <div className="h-12 bg-primary text-primary-foreground boder border-primary rounded-t-[inherit] grid grid-cols-[1fr_repeat(3,10rem)] items-center [&>div]:px-4">
+                            <div className=""> <TypographySmall>Activities</TypographySmall> </div>
+                            <div className="text-center"> <TypographySmall>Male</TypographySmall> </div>
+                            <div className="text-center"> <TypographySmall>Female</TypographySmall> </div>
+                            <div className="text-center"> <TypographySmall>Total</TypographySmall> </div>
+                        </div>
+                        <div className="rounded-b-[inherit] border border-border border-t-0 divide-y divide-border">
+                            {list.map((vacc, index) => (
+                                <div key={index} className="h-12 grid grid-cols-[1fr_repeat(3,10rem)] items-center [&>div]:px-4">
+                                    <div className=""> <TypographySmall>{vacc.vacc}</TypographySmall> </div>
+                                    <div className="text-center"> <TypographySmall>{vacc.m}</TypographySmall> </div>
+                                    <div className="text-center"> <TypographySmall>{vacc.f}</TypographySmall> </div>
+                                    <div className="text-center"> <TypographySmall>{vacc.t}</TypographySmall> </div>
+                                </div>
+                            ))}
+                        </div>
+                    </Card>
+                </div>
                 
                 {/* <div className="space-y-5">
                     <Report1 />
@@ -54,3 +75,54 @@ export default function Page() {
         </div>
     )
 }
+
+const list = [
+    {
+        vacc: 'BCG',
+        m: 50,
+        f: 50,
+        t: 50,
+    },
+    {
+        vacc: 'PENTAVALENT 1',
+        m: 50,
+        f: 50,
+        t: 50,
+    },
+    {
+        vacc: 'PENTAVALENT 2',
+        m: 50,
+        f: 50,
+        t: 50,
+    },
+    {
+        vacc: 'PENTAVALENT 3',
+        m: 50,
+        f: 50,
+        t: 50,
+    },
+    {
+        vacc: 'POLIO 1',
+        m: 50,
+        f: 50,
+        t: 50,
+    },
+    {
+        vacc: 'POLIO 2',
+        m: 50,
+        f: 50,
+        t: 50,
+    },
+    {
+        vacc: 'POLIO 3',
+        m: 50,
+        f: 50,
+        t: 50,
+    },
+    {
+        vacc: 'IPV',
+        m: 50,
+        f: 50,
+        t: 50,
+    },
+]

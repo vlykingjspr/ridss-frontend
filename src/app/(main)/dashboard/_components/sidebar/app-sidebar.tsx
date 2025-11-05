@@ -25,7 +25,7 @@ import { Button } from "@/components/ui/button";
 import { useRidsUserStore } from "@/stores/user";
 import { useEffect, useMemo } from "react";
 import { cn } from "@/lib/utils";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const data = {
     navSecondary: [
@@ -68,8 +68,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     const selectedUser = useRidsUserStore((state) => state.selected)
     const setSelectedUser = useRidsUserStore((state) => state.setSelected)
     const isCollapsed = useSidebar().state
-
-    const route = useRouter()
+    const pathname = usePathname()
 
     const navigationTabs = useMemo(() => {
         if(selectedUser) {
@@ -80,7 +79,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
     useEffect(() => {
         if(!selectedUser) {
-            setSelectedUser(ridsUsers[3])
+            const activeUser = ridsUsers.find((u) => pathname.startsWith('/'+u.role))
+            if(activeUser)
+                setSelectedUser(activeUser)
         }
     }, [selectedUser])
 

@@ -51,7 +51,7 @@ export default function Page() {
                     </div>
                     <div className="border border-border rounded-b-[inherit] divide-y divide-border">
                         {Array.from({ length: 3 }).map((_, index) => (
-                            <div className="h-11 grid grid-cols-[repeat(4,_1fr)_10rem] items-center">
+                            <div key={index} className="h-11 grid grid-cols-[repeat(4,_1fr)_10rem] items-center">
                                 <div className="px-4 line-clamp-1"> <TypographySmall>{format(new Date(), "MMMM d, y hh:m:ss a")}</TypographySmall> </div>
                                 <div className="px-4 line-clamp-1"> <TypographySmall>John Doe</TypographySmall> </div>
                                 <div className="px-4 line-clamp-1"> <TypographySmall>Request vials</TypographySmall> </div>
