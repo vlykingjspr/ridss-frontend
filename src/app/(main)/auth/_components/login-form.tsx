@@ -10,9 +10,10 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
+import { ridsUsers } from "@/data/users";
 
 const FormSchema = z.object({
-    email: z.string().email({ message: "Please enter a valid email address." }),
+    email: z.string().min(1, "Please provide username"),
     password: z.string().min(6, { message: "Password must be at least 6 characters." }),
     remember: z.boolean().optional(),
 });
@@ -21,8 +22,8 @@ export function LoginForm() {
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
         defaultValues: {
-            email: "ridss@gmail.com",
-            password: "12345678",
+            email: "",
+            password: "",
             remember: false,
         },
     });
@@ -37,7 +38,11 @@ export function LoginForm() {
         //         </pre>
         //     ),
         // });
-        router.push('/dashboard')
+        const username = data.email
+
+        const auth = ridsUsers.find((u) => u.username == username)
+
+        router.push("/"+auth?.role+'/dashboard')
     };
 
     return (
@@ -48,13 +53,13 @@ export function LoginForm() {
                     name="email"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Username / Email Address</FormLabel>
+                            <FormLabel>Username</FormLabel>
                             <FormControl>
                                 <Input
                                     id="email"
-                                    type="email"
-                                    placeholder="you@example.com"
-                                    autoComplete="email"
+                                    // type="email"
+                                    placeholder="username"
+                                    // autoComplete="email"
                                     {...field}
                                 />
                             </FormControl>
