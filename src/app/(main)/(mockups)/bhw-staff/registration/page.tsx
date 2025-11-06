@@ -11,6 +11,39 @@ import { Fragment } from "react";
 type Props = {
     searchParams?: { tab: string }
 }
+
+// async function getApiAddress<T>(
+//     route: string,
+//     setData: (data: Array<T>) => void
+// ) {
+//     try {
+//         const response = await window.axios.get(route);
+
+//         setData(response.data);
+//     } catch (error) {
+//         console.error("Error fetching data:", error);
+//     }
+// }
+// type BARANGAY = {
+//     code: string;
+//     name: string;
+//     oldName: string;
+//     subMunicipalityCode: string;
+//     cityCode: string;
+//     municipalityCode: string;
+//     districtCode: string;
+//     provinceCode: string;
+//     regionCode: string;
+//     islandGroupCode: string;
+// };
+// const onCityMunicipalitySelect = (CMCode: string) => {
+//     getApiAddress<BARANGAY>(
+//         "https://psgc.gitlab.io/api/cities-municipalities/" +
+//             CMCode +
+//             "/barangays.json",
+//         setBarangay
+//     );
+// };
 export default function Page({ searchParams }: Props) {
     const tabs = searchParams?.tab
 

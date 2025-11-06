@@ -1,7 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { TypographyH1, TypographyH3, TypographyLarge, TypographyLead, TypographySmall } from "@/components/ui/typography";
+import FingerPrint from "./_components/finger-print";
 
-export default function Page() {
+interface Props {
+    searchParams?: Promise<{ fingerprint: boolean }>
+}
+export default async function Page({searchParams}: Props) {
+    const sp = await searchParams
+    const fp = sp?.fingerprint
+
     return (
         <div className="">
             <TypographyLarge>Dashboard</TypographyLarge>
@@ -98,6 +105,8 @@ export default function Page() {
                     </div>
                 </div>
             </div>
+
+            {fp && (<FingerPrint />)}
         </div>
     )
 }
