@@ -3,6 +3,8 @@ import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { TypographyH3, TypographyH4, TypographyLarge, TypographySmall } from "@/components/ui/typography";
 import { ChartColumnBig, ChevronRight, PillBottle } from "lucide-react";
+import ImmunizingBarangay from "../../bhw-staff/dashboard/_components/Immunizing-brangay";
+import Link from "next/link";
 
 export default function Page() {
     return (
@@ -40,10 +42,10 @@ export default function Page() {
                 </Card>
             </div>
 
-            <div className="mt-6 grid grid-cols-1 gap-3">
+            <div className="mt-6 grid grid-cols-2 gap-4">
                 <Card className="shadow-xs rounded-md gap-0 p-3 overflow-hidden h-120">
                     <div className="flex items-center justify-between">
-                        <TypographyLarge>Stocks Alert</TypographyLarge>
+                        <TypographySmall className="text-[15px]">Stocks Alert</TypographySmall>
 
                         <Button variant="outline" className="cursor-pointer">
                             <span>View Inventory</span>
@@ -114,6 +116,33 @@ export default function Page() {
                         </Card>
                     </div>
                 </Card>
+
+                <Card className="shadow-xs rounded-md gap-0 p-3 overflow-hidden h-120">
+                    <div className="flex items-center justify-between">
+                        <TypographySmall className="text-[15px]">Pending Request</TypographySmall>
+
+                        <Button variant="outline" className="cursor-pointer">
+                            <span>View Requests</span>
+                            <ChevronRight />
+                        </Button>
+                    </div>
+                    <div className="mt-4 space-y-1">
+                        <Link href="/cho-staff/vaccine?tab=request">
+                            <Card className="shadow-none rounded-sm hover:bg-secondary p-3 py-2 flex-row items-center gap-3 cursor-pointer">
+                                <div className="leading-5">
+                                    <div className=""><TypographySmall>New Visayas</TypographySmall></div>
+                                    <div className=""><TypographySmall className="text-muted-foreground text-[13px]">Issued By: </TypographySmall><TypographySmall className="text-[13px]">Anna Doe</TypographySmall></div>
+                                </div>
+
+                                <ChevronRight className="size-4 ml-auto" />
+                            </Card>
+                        </Link>
+                    </div>
+                </Card>
+
+                <div className="col-span-full">
+                    <ImmunizingBarangay />
+                </div>
             </div>
         </div>
     )

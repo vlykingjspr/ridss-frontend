@@ -7,6 +7,7 @@ import { Check, Loader, Mars, PillBottle, Syringe, UsersRound, Venus } from "luc
 import { TooltipComponent } from "@/components/ui/tooltip";
 import VaccinePing from "@/components/ping";
 import BarangayStocks from "./_components/barangay-stocks";
+import ImmunizingBarangay from "../../bhw-staff/dashboard/_components/Immunizing-brangay";
 
 export default function Page() {
     const status: "shortage" | "sufficient" | "excess" | "used" = "sufficient";
@@ -24,7 +25,9 @@ export default function Page() {
                     <BarangayStocks />
                 </div>
 
-                <Card className="gap-3 rounded-md p-3 shadow-xs">
+                <ImmunizingBarangay />
+
+                <Card className="gap-3 rounded-md p-3 shadow-xs" hidden>
                     <div className="mb-1 w-full">
                         <div className="mb-2 flex items-center gap-3 text-muted-foreground">
                             <div className="flex items-center gap-1">

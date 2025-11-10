@@ -32,28 +32,28 @@ export const barangays = [
     },
     {
         id: 2,
-        brgy: 'New Malitbog',
+        brgy: 'New Visayas',
         name: "Sophia Delgado",
         vaccines: 5,
         contact: "0921-884-7335"
     },
     {
         id: 3,
-        brgy: 'New Malitbog',
+        brgy: 'San Pedro',
         name: "Marcus Villanueva",
         vaccines: 5,
         contact: "0995-230-4478"
     },
     {
         id: 4,
-        brgy: 'New Malitbog',
+        brgy: 'New Pandan',
         name: "Althea Santos",
         vaccines: 5,
         contact: "0908-612-9543"
     },
     {
         id: 5,
-        brgy: 'New Malitbog',
+        brgy: 'Southern Davao',
         name: "Julian Mercado",
         vaccines: 5,
         contact: "0936-740-1289"

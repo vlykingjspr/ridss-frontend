@@ -1,33 +1,34 @@
-import { Card } from "@/components/ui/card";
-import { TypographyLarge, TypographySmall } from "@/components/ui/typography";
-import InventoryCard from "../../bhw-head/vaccine/_components/inventory-card";
+import InventoryTabs from "./_components/tabs";
+import Transaction from "./_components/transaction";
+import InventoryStocks from "./_components/inventory";
+import InventoryRequest from "./_components/requests";
 
-export default function Page() {
+import { ChevronRight } from "lucide-react";
+import { TypographyLarge } from "@/components/ui/typography";
+
+interface Props {
+    searchParams: Promise<{ tab: 'stocks' | 'request' | 'transaction' }>
+}
+export default async function Page({ searchParams }: Props) {
+    const sp = await searchParams
+    const tab = sp.tab
+    
     return (
         <div className="">
-            <TypographyLarge>Inventory</TypographyLarge>
+            <div className="flex items-center gap-1">
+                <TypographyLarge>Inventory</TypographyLarge>
+                <ChevronRight className="size-4" />
+                <TypographyLarge className="capitalize">{tab}</TypographyLarge>
+            </div>
             
             <div className="mt-6">
-                <Card className="gap-0 overflow-hidden rounded-md p-0 shadow-xs">
-                    <div className="bg-primary text-primary-foreground grid h-12 grid-cols-[repeat(3,_1fr)_5rem] items-center px-3 [&>div]:not-first:text-center">
-                        <div className="col-span-1">
-                            <TypographySmall>Vaccine</TypographySmall>
-                        </div>
-                        <div className="">
-                            <TypographySmall>Unopened Vials</TypographySmall>
-                        </div>
-                        <div className="">
-                            <TypographySmall>Opened Vials</TypographySmall>
-                        </div>
-                        <div className="">
-                        </div>
-                    </div>
-                    <div className="divide-y">
-                        <InventoryCard vaccine={{ name: "Oral Polio Vaccine", vials: 6, doses: 20, opened: 1 }} />
-                        <InventoryCard vaccine={{ name: "Hepatitis B", vials: 10, doses: 1, opened: 0 }} />
-                        <InventoryCard vaccine={{ name: "Pneumococcal Conjugate Vaccine", vials: 10, doses: 4, opened: 0 }} />
-                    </div>
-                </Card>
+                <div className="">
+                    <InventoryTabs tab={tab} />
+                </div>
+
+                {tab === 'stocks' && (<InventoryStocks />)}
+                {tab === 'request' && (<InventoryRequest />)}
+                {tab === 'transaction' && (<Transaction />)}
             </div>
         </div>
     )

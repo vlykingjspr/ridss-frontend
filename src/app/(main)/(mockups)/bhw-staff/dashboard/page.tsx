@@ -11,6 +11,7 @@ import BarangayCard from "./_components/barangay-card";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 import VaccinePing from "@/components/ping";
+import ImmunizingBarangay from "./_components/Immunizing-brangay";
 
 export default function Page() {
     return (
@@ -53,9 +54,9 @@ export default function Page() {
                     </div>
                     <OverlayScrollbar className="h-full">
                         <div className="divide-y divide-border">
-                            {Array.from({ length: 10 }).map((_, index) => (
-                                <div className="flex items-center p-2 py-3 hover:bg-secondary transition duration-200" key={index}>
-                                    <div className="text-[15px] px-1 line-clamp-1">Lorem ipsum dolor est</div>
+                            {pendingRegistrations.map((reg) => (
+                                <div className="flex items-center p-2 py-3 hover:bg-secondary transition duration-200" key={reg.id}>
+                                    <div className="text-[15px] px-1 line-clamp-1">{reg.name}</div>
 
                                     <div className="flex items-center gap-2 ml-auto">
                                         <TooltipComponent title="Approve">
@@ -77,7 +78,7 @@ export default function Page() {
 
                 <UpcommingImmunization />
 
-                <Card className="grid grid-cols-[repeat(auto-fill,_minmax(16rem,1fr))] gap-3 rounded-md p-3 shadow-xs col-span-full">
+                <Card className="grid grid-cols-[repeat(auto-fill,_minmax(16rem,1fr))] gap-3 rounded-md p-3 shadow-xs col-span-full" hidden>
                     <div className="mb-1">
                         <TypographySmall className="line-clamp-1 text-base leading-5">
                             Ongoing Vaccination
@@ -188,10 +189,23 @@ export default function Page() {
                     <BarangayCard status="sufficient" />
                 </Card>
 
-                {/* <OngoingImmunization /> */}
-
-                {/* <DashboardCard className="h-120 overflow-hidden"></DashboardCard> */}
+                <div className="col-span-full">
+                    <ImmunizingBarangay />
+                </div>
             </div>
         </div>
     );
 }
+
+const pendingRegistrations = [
+  { id: 1, name: "Jasmine Dela Cruz", status: "pending" },
+  { id: 2, name: "Marco Villanueva", status: "pending" },
+  { id: 3, name: "Lara Mendoza", status: "pending" },
+  { id: 4, name: "Ramon Castillo", status: "pending" },
+  { id: 5, name: "Faith Alonzo", status: "pending" },
+  { id: 6, name: "Daniel Roxas", status: "pending" },
+  { id: 7, name: "Mika Santos", status: "pending" },
+  { id: 8, name: "Jorel Vergara", status: "pending" },
+  { id: 9, name: "Celine Marquez", status: "pending" },
+  { id: 10, name: "Arvin Soriano", status: "pending" }
+];

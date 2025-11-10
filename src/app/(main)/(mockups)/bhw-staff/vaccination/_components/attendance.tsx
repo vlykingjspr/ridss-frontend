@@ -3,50 +3,72 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { TypographySmall } from "@/components/ui/typography";
 import { ChevronLeft, ChevronRight, Ellipsis } from "lucide-react";
+import ScanQrCodeButton from "./scan-qr";
 
 export default function VaccineAttendance() {
     return (
         <div className="mt-6">
-            <div className="mb-4 ml-auto w-full max-w-sm">
-                <SearchInput className="h-10 w-full rounded-md" placeholder="Search child" />
+            <div className="mb-4 flex items-center">
+                <ScanQrCodeButton />
+                <div className="w-full max-w-sm ml-auto">
+                    <SearchInput className="h-10 w-full rounded-md" placeholder="Search child" />
+                </div>
             </div>
 
             <Card className="gap-0 overflow-hidden rounded-md border-none p-0 shadow-xs">
-                <div className="border-primary bg-primary text-primary-foreground grid h-12 grid-cols-[repeat(2,_1fr)_10rem] items-center rounded-t-[inherit] border-b">
-                    <div className="px-4">
+                <div className="border-primary bg-primary text-primary-foreground grid h-12 grid-cols-[repeat(4,_1fr)_10rem] [&>div]:px-4 items-center rounded-t-[inherit] border-b">
+                    <div className="">
                         <TypographySmall>Child Name</TypographySmall>
                     </div>
-                    <div className="px-4">
-                        <TypographySmall>Queue Number</TypographySmall>
+                    <div className="">
+                        <TypographySmall>Sex</TypographySmall>
                     </div>
-                    <div className="px-4 text-center">
+                    <div className="">
+                        <TypographySmall>Age</TypographySmall>
+                    </div>
+                    <div className="">
+                        <TypographySmall>Vaccine</TypographySmall>
+                    </div>
+                    <div className="text-center">
                         <TypographySmall>Action</TypographySmall>
                     </div>
                 </div>
                 <div className="border-border divide-border divide-y rounded-b-[inherit] border border-t-0">
-                    <div className="grid h-11 grid-cols-[repeat(2,_1fr)_10rem] items-center">
-                        <div className="px-4">
+                    <div className="grid h-11 grid-cols-[repeat(4,_1fr)_10rem] [&>div]:px-4 items-center">
+                        <div className="">
                             <TypographySmall>John Doe</TypographySmall>
                         </div>
-                        <div className="px-4">
-                            <TypographySmall>001</TypographySmall>
+                        <div className="">
+                            <TypographySmall>Male</TypographySmall>
                         </div>
-                        <div className="flex items-center justify-center px-4">
-                            <Button className="h-8 bg-green-600">
-                                <span>Present</span>
+                        <div className="">
+                            <TypographySmall>1 yr</TypographySmall>
+                        </div>
+                        <div className="">
+                            <TypographySmall>BCG</TypographySmall>
+                        </div>
+                        <div className="flex items-center justify-center">
+                            <Button className="h-8" variant="outline">
+                                <span>Received</span>
                             </Button>
                         </div>
                     </div>
-                    <div className="grid h-11 grid-cols-[repeat(2,_1fr)_10rem] items-center">
-                        <div className="px-4">
-                            <TypographySmall>John Doe</TypographySmall>
+                    <div className="grid h-11 grid-cols-[repeat(4,_1fr)_10rem] [&>div]:px-4 items-center">
+                        <div className="">
+                            <TypographySmall>Anton Doze</TypographySmall>
                         </div>
-                        <div className="px-4">
-                            <TypographySmall>002</TypographySmall>
+                        <div className="">
+                            <TypographySmall>Male</TypographySmall>
                         </div>
-                        <div className="flex items-center justify-center px-4">
-                            <Button className="h-8 bg-green-600">
-                                <span>Present</span>
+                        <div className="">
+                            <TypographySmall>1 yr</TypographySmall>
+                        </div>
+                        <div className="">
+                            <TypographySmall>BCG</TypographySmall>
+                        </div>
+                        <div className="flex items-center justify-center">
+                            <Button className="h-8" variant="outline">
+                                <span>Received</span>
                             </Button>
                         </div>
                     </div>

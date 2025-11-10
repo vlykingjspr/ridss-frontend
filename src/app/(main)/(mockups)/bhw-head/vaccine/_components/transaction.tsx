@@ -2,7 +2,7 @@ import { TypographySmall } from "@/components/ui/typography";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Menubar, MenubarContent, MenubarItem, MenubarLabel, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
-import { Calendar, ChevronDown, Download, Filter, Plus, Settings2 } from "lucide-react";
+import { Calendar, ChevronDown, Download, Plus } from "lucide-react";
 import { eachMonthOfInterval, format } from "date-fns";
 import { cn } from "@/lib/utils";
 import TransactionTabs from "./tansaction-tabs";

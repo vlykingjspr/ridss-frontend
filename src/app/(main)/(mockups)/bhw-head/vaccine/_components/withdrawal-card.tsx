@@ -7,7 +7,10 @@ import { Check, ChevronDown, Minus, Plus } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 
-export default function WithdrawalCard() {
+interface Props {
+    submittedTo?: string;
+}
+export default function WithdrawalCard({ submittedTo = "CHO" }: Props) {
     const [open, setOpen] = useState(false)
 
     return (
@@ -57,7 +60,7 @@ export default function WithdrawalCard() {
 
             <div className="flex justify-end items-center mt-4">
                 <Button className="h-11 px-5">
-                    <span>Submit to CHO</span>
+                    <span>Submit to {submittedTo}</span>
                 </Button>
             </div>
         </Card>

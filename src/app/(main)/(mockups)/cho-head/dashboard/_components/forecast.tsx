@@ -111,7 +111,7 @@ export default function ForecastChart(): JSX.Element {
     return (
         <Card className="gap-0 overflow-hidden rounded-md shadow-xs">
             <CardHeader>
-                <CardTitle>Vaccine Forceast</CardTitle>
+                <CardTitle>Vaccine Forecast</CardTitle>
                 <CardDescription>Dashed line indicates predicted values</CardDescription>
             </CardHeader>
             <CardContent className="mt-4">

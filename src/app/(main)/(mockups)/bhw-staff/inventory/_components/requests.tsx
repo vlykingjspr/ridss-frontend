@@ -1,14 +1,19 @@
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { TooltipComponent } from "@/components/ui/tooltip";
-import { TypographySmall } from "@/components/ui/typography";
-import { ArrowUpDown, Check, ChevronDown, Loader, Settings2, Trash2 } from "lucide-react";
-import { Menubar, MenubarContent, MenubarItem, MenubarLabel, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
-import WithdrawalCard from "./withdrawal-card";
+import NewRequest from "../../vaccination/_components/new-request";
+import WithdrawalCard from "../../../bhw-head/vaccine/_components/withdrawal-card";
 
-export default function WithdrawalConfirmation() {
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { TypographySmall } from "@/components/ui/typography";
+import { Check, Loader, Trash2 } from "lucide-react";
+import { TooltipComponent } from "@/components/ui/tooltip";
+
+export default function InventoryRequest() {
     return (
-        <div className="mt-6">
+        <div className="space-y-4 mt-5">
+            <div className="flex">
+                <NewRequest />
+            </div>
+
             <Card className="gap-0 overflow-hidden rounded-md border-none p-0 shadow-xs">
                 <div className="bg-primary text-primary-foreground grid h-12 grid-cols-5 items-center px-3" hidden>
                     <div className="">
@@ -58,7 +63,7 @@ export default function WithdrawalConfirmation() {
                 </div>
 
                 <div className="space-y-4">
-                    <WithdrawalCard />
+                    <WithdrawalCard submittedTo="Head" />
                 </div>
             </Card>
 
@@ -68,3 +73,38 @@ export default function WithdrawalConfirmation() {
         </div>
     );
 }
+
+const vaccinesRequested = [
+    {
+        id: 1,
+        vaccine: 'BCG',
+        issued: 20,
+        status: 'Approved',
+        issued_date: 'October 20, 2025',
+        approved_date: 'October 21, 2025'
+    },
+    {
+        id: 1,
+        vaccine: 'HEPATITIS B',
+        issued: 20,
+        status: 'Approved',
+        issued_date: 'October 20, 2025',
+        approved_date: 'October 21, 2025'
+    },
+    {
+        id: 1,
+        vaccine: 'IPV',
+        issued: 20,
+        status: 'Approved',
+        issued_date: 'October 20, 2025',
+        approved_date: 'October 21, 2025'
+    },
+    {
+        id: 1,
+        vaccine: 'OPV',
+        issued: 20,
+        status: 'Approved',
+        issued_date: 'October 20, 2025',
+        approved_date: 'October 21, 2025'
+    },
+]

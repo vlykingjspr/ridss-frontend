@@ -236,6 +236,10 @@ These serve as the fallback; there is no separate default.css file. */
     }
 }
 
+.test {
+    background: linear-gradient(5deg,rgba(5, 183, 242, 1) 0%, rgba(125, 214, 250, 1) 41%, rgba(189, 230, 255, 1) 100%);
+}
+
 #nprogress {
     pointer-events: none;
 }

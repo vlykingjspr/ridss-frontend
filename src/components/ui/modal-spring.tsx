@@ -29,7 +29,8 @@ export type ModalProps = PropsWithChildren & {
 		| "5xl"
 		| "6xl"
 		| "7xl"
-		| "fit";
+		| "fit"
+		| "full";
     thight?: boolean;
     preventAutoFocus?: boolean;
     outsideClick?: boolean;
@@ -56,6 +57,7 @@ export default function Modal({
 		"6xl": "sm:max-w-6xl",
 		"7xl": "sm:max-w-7xl",
 		fit: "sm:max-w-fit",
+		full: "max-w-full",
 	}[maxWidth];
 
 	return (

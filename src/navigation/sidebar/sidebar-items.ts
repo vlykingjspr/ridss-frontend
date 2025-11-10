@@ -17,6 +17,7 @@ import {
     MessageSquareText,
     FileText,
     Layers,
+    QrCode,
 } from "lucide-react";
 
 export interface NavSubItem {
@@ -75,6 +76,12 @@ export const sidebarItems: NavGroup[] = [
                 icon: ClipboardClock,
             },
             {
+                id: "/mother/qr_code",
+                title: "QR Code",
+                url: "/mother/qr_code",
+                icon: QrCode,
+            },
+            {
                 id: "/mother/profile",
                 title: "Profile",
                 url: "/mother/profile",
@@ -108,7 +115,7 @@ export const sidebarItems: NavGroup[] = [
             {
                 id: "/bhw-staff/vaccination",
                 title: "Vaccination",
-                url: "/bhw-staff/vaccination?tab=request",
+                url: "/bhw-staff/vaccination?tab=attendance",
                 icon: PillBottle,
             },
             {
@@ -120,7 +127,7 @@ export const sidebarItems: NavGroup[] = [
             {
                 id: "/bhw-staff/inventory",
                 title: "Inventory",
-                url: "/bhw-staff/inventory",
+                url: "/bhw-staff/inventory?tab=stocks",
                 icon: Warehouse,
             },
             // {
@@ -263,12 +270,12 @@ export const sidebarItems: NavGroup[] = [
                 url: "/cho-staff/notifications",
                 icon: Bell,
             },
-            {
-                id: "/cho-staff/messaging",
-                title: "Messages",
-                url: "/cho-staff/messaging",
-                icon: MessageSquareText,
-            },
+            // {
+            //     id: "/cho-staff/messaging",
+            //     title: "Messages",
+            //     url: "/cho-staff/messaging",
+            //     icon: MessageSquareText,
+            // },
             // {
             //     id: "/cho-staff/validation",
             //     title: "Validation",
@@ -289,11 +296,17 @@ export const sidebarItems: NavGroup[] = [
                 icon: LayoutDashboard,
             },
             {
-                id: "/cho-head/vaccine-approval",
-                title: "Vaccine Approval",
-                url: "/cho-head/vaccine-approval",
-                icon: ReceiptText,
+                id: "/cho-head/vaccine",
+                title: "Vaccine",
+                url: "/cho-head/vaccine?tab=inventory",
+                icon: PillBottle,
             },
+            // {
+            //     id: "/cho-head/vaccine-approval",
+            //     title: "Vaccine Approval",
+            //     url: "/cho-head/vaccine-approval",
+            //     icon: ReceiptText,
+            // },
             {
                 id: "/cho-head/data-verification",
                 title: "Data Verification",
@@ -306,16 +319,22 @@ export const sidebarItems: NavGroup[] = [
                 url: "/cho-head/city-reports",
                 icon: ChartColumnBig,
             },
-            {
-                id: "/cho-head/inventory-oversight",
-                title: "Inventory Oversight",
-                url: "/cho-head/inventory-oversight",
-                icon: Warehouse,
-            },
+            // {
+            //     id: "/cho-head/inventory-oversight",
+            //     title: "Inventory Oversight",
+            //     url: "/cho-head/inventory-oversight",
+            //     icon: Warehouse,
+            // },
             {
                 id: "/cho-head/user-management",
                 title: "Users",
                 url: "/cho-head/user-management",
+                icon: ClipboardList,
+            },
+            {
+                id: "/cho-head/barangay",
+                title: "Barangay",
+                url: "/cho-head/barangay",
                 icon: ClipboardList,
             },
             {

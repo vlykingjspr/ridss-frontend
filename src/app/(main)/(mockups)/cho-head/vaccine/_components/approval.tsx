@@ -1,15 +1,19 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Check, Loader, Trash2, X } from "lucide-react";
+import { Check, X } from "lucide-react";
 import { TypographySmall } from "@/components/ui/typography";
+import TransactionTabs from "../../../bhw-head/vaccine/_components/tansaction-tabs";
 import { TooltipComponent } from "@/components/ui/tooltip";
-import WithdrawalCard from "./request-vaccine-card";
 
-export default function Requests() {
+export default function Approval() {
     return (
         <div className="mt-6">
-            {/* <div className="mb-3 px-4">
+            <div className="mb-3 px-4">
                 <TransactionTabs />
+            </div>
+
+            <div className="">
+
             </div>
 
             <Card className="rounded-md shadow-xs gap-0 p-0 border-none overflow-hidden">
@@ -66,11 +70,7 @@ export default function Requests() {
                         </div>
                     ))}
                 </div>
-            </Card> */}
-
-            <div className="space-y-4">
-                <WithdrawalCard label="Approve All Request" />
-            </div>
+            </Card>
 
             <div className="rounded-full shadow-xs dark:shadow-white/25 size-fit mx-auto mt-5">
                 <div className="rounded full shadow-inner shadow-zinc-300/80 dark:shadow-white/25 size-2"></div>
