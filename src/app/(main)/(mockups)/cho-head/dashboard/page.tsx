@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { TypographyH3, TypographyLarge, TypographySmall } from "@/components/ui/typography";
 import { VaccinatedChart } from "./_components/vaccinated-chart";
+import ForecastChart from "./_components/forecast";
 
 export default function Page() {
     return (
@@ -39,7 +40,7 @@ export default function Page() {
             </div>
 
             <div className="mt-6">
-                <VaccinatedChart />
+                <ForecastChart />
             </div>
             
         </div>

@@ -5,8 +5,9 @@ import { TypographyLarge, TypographySmall } from "@/components/ui/typography";
 interface Props {
     isToday?: boolean;
     onCancel: CallableFunction;
+    onAttend: CallableFunction;
 }
-export default function UpcomingImmunizationCard({ isToday, onCancel }: Props) {
+export default function UpcomingImmunizationCard({ isToday, onCancel, onAttend }: Props) {
     return (
         <Card className="!p-3">
             <CardContent className="space-y-2 px-1.5">
@@ -33,7 +34,7 @@ export default function UpcomingImmunizationCard({ isToday, onCancel }: Props) {
                     </div>
 
                     <div className="grid grid-cols-2 gap-3">
-                        <Button>Can Attend</Button>
+                        <Button onClick={() => onAttend(true)}>Can Attend</Button>
                         <Button variant={"secondary"} onClick={() => onCancel(true)}>
                             Cannot to Attend
                         </Button>

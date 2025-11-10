@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { TypographySmall } from "@/components/ui/typography";
 import { ChevronLeft } from "lucide-react";
 import { ProfilePhoto } from "../../../../../../components/ui/avatar";
+import Component from "@/components/comp-235";
 
 interface Props {
     onCloseNewSchedule: CallableFunction;
@@ -19,12 +20,16 @@ export default function EventForm({ onCloseNewSchedule }: Props) {
                     <Input type="time" className="" />
                 </div>
 
+                <div className="">
+                    <Component />
+                </div>
+
                 <div className="flex flex-col gap-1.5">
                     <TypographySmall>Details</TypographySmall>
                     <Textarea className="min-h-60 resize-none rounded-sm" placeholder="Type here..." />
                 </div>
 
-                <div className="rounded-sm border border-border shadow-xs overflow-hidden">
+                <div className="rounded-sm border border-border shadow-xs overflow-hidden" hidden>
                     <Input className="border-none shadow-none h-11 focus-visible:ring-0 ring-offset-0 focus-visible:bg-secondary/80 rounded-none" placeholder="Search user" />
                     <div className="border-t border-border p-2 flex flex-wrap gap-2">
                         {Array.from({ length: 4 }).map((_, index) => (

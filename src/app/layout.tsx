@@ -34,7 +34,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
                 <PreferencesStoreProvider themeMode={themeMode} themePreset={themePreset}>
                     <RouteProgress />
                     {children}
-                    <Toaster position="top-left" />
+                    <Toaster position="top-right" />
                 </PreferencesStoreProvider>
             </body>
         </html>

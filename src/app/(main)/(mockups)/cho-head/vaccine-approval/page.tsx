@@ -20,7 +20,7 @@ export default function Page() {
                                 </Button>
                             </MenubarTrigger>
                             <MenubarContent align="start" alignOffset={0} sideOffset={2}>
-                                <MenubarItem>All Vaccine</MenubarItem>
+                                <MenubarItem className="font-semibold text-primary">All Vaccine</MenubarItem>
                                 <MenubarItem>Bacillus-Calmette-Guerin</MenubarItem>
                                 <MenubarItem>Hepatitis B</MenubarItem>
                                 <MenubarItem>DTwP-HepB-Hib</MenubarItem>
@@ -46,26 +46,26 @@ export default function Page() {
                             <TypographySmall>Vaccine</TypographySmall>
                         </div>
                         <div className="">
-                            <TypographySmall>Qty.</TypographySmall>
+                            <TypographySmall>Vials</TypographySmall>
                         </div>
                         <div className="">
-                            <TypographySmall>Qty. Bal.</TypographySmall>
+                            <TypographySmall>Vials Remaining</TypographySmall>
                         </div>
                     </div>
                     <div className="rounded-b-[inherit] border border-t-0 border-border divide-y divide-border">
-                        {Array.from({ length: 3 }).map((_, index) => (
-                            <div key={index} className="h-12 grid grid-cols-8 [&>div:nth-child(-n+2)]:col-span-2 items-center [&>div]:pl-4">
+                        {brgys.map((brgy, index) => (
+                            <div key={brgy.id} className="h-12 grid grid-cols-8 [&>div:nth-child(-n+2)]:col-span-2 items-center [&>div]:pl-4">
                                 <div className="">
-                                    <TypographySmall>Brgy. Lorem Ipsum</TypographySmall>
+                                    <TypographySmall>{brgy.brgy}</TypographySmall>
                                 </div>
                                 <div className="">
-                                    <TypographySmall>Lorem Ipsum</TypographySmall>
+                                    <TypographySmall>{brgy.issuer}</TypographySmall>
                                 </div>
                                 <div className="">
-                                    <TypographySmall>BCG</TypographySmall>
+                                    <TypographySmall>{brgy.vaccine}</TypographySmall>
                                 </div>
                                 <div className="">
-                                    <TypographySmall>2</TypographySmall>
+                                    <TypographySmall>{brgy.vials}</TypographySmall>
                                 </div>
                                 <div className="">
                                     <TypographySmall>50</TypographySmall>
@@ -90,3 +90,41 @@ export default function Page() {
         </div>
     )
 }
+
+const brgys = [
+    {
+        id: 1,
+        brgy: 'New Malitbog',
+        issuer: 'Anna Rose',
+        vaccine: 'BCG',
+        vials: '40',
+    },
+    {
+        id: 2,
+        brgy: 'New Visayas',
+        issuer: 'John Anton Sy',
+        vaccine: 'BOPV',
+        vials: '12',
+    },
+    {
+        id: 3,
+        brgy: 'San Pedro',
+        issuer: 'Althea Santos',
+        vaccine: 'IPV',
+        vials: '14',
+    },
+    {
+        id: 4,
+        brgy: 'Maduao',
+        issuer: 'Ethan Rivera',
+        vaccine: 'OPV',
+        vials: '20',
+    },
+    {
+        id: 5,
+        brgy: 'Malativas',
+        issuer: 'Johny Bravo',
+        vaccine: 'OPV',
+        vials: '10',
+    },
+]

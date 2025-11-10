@@ -25,7 +25,7 @@ export default function Transaction() {
 
     return (
         <div className="mt-6">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 border-b pb-3">
                 <Menubar className="w-fit border-none p-0 shadow-none">
                     <MenubarMenu>
                         <MenubarTrigger asChild>
@@ -130,7 +130,7 @@ export default function Transaction() {
                             {Array.from({ length: 4 }).map((_, index) => (
                                 <div key={index} className="grid h-12 grid-cols-6 items-center [&>div]:px-4">
                                     <div className="">
-                                        <TypographySmall>{format((index)+2+'/'+(new Date().getDay() +'/'+ new Date().getFullYear()), "MMM")} {format(new Date(), "d, y")}</TypographySmall>
+                                        <TypographySmall>{format((index+2)+'/'+(new Date().getDate() +'/'+ new Date().getFullYear()), "MMM")} {format(new Date(), "d, y")}</TypographySmall>
                                     </div>
                                     <div className="">
                                         <TypographySmall>Routine Imm.</TypographySmall>

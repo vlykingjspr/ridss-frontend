@@ -99,12 +99,12 @@ export const sidebarItems: NavGroup[] = [
                 url: "/bhw-staff/dashboard",
                 icon: LayoutDashboard,
             },
-            {
-                id: "/bhw-staff/registration",
-                title: "Registration",
-                url: "/bhw-staff/registration?tab=all",
-                icon: ClipboardPenLine,
-            },
+            // {
+            //     id: "/bhw-staff/registration",
+            //     title: "Registration",
+            //     url: "/bhw-staff/registration?tab=all",
+            //     icon: ClipboardPenLine,
+            // },
             {
                 id: "/bhw-staff/vaccination",
                 title: "Vaccination",
@@ -123,16 +123,16 @@ export const sidebarItems: NavGroup[] = [
                 url: "/bhw-staff/inventory",
                 icon: Warehouse,
             },
-            {
-                id: "/bhw-staff/records",
-                title: "Records",
-                url: "/bhw-staff/records",
-                icon: ClipboardList,
-            },
+            // {
+            //     id: "/bhw-staff/records",
+            //     title: "Records",
+            //     url: "/bhw-staff/records",
+            //     icon: ClipboardList,
+            // },
             {
                 id: "/bhw-staff/records",
                 title: "Barangay Records",
-                url: "/bhw-staff/records",
+                url: "/bhw-staff/records?tab=registered",
                 icon: ClipboardList,
             },
             {
@@ -169,7 +169,7 @@ export const sidebarItems: NavGroup[] = [
             {
                 id: "/bhw-head/records",
                 title: "Barangay Records",
-                url: "/bhw-head/records",
+                url: "/bhw-head/records?tab=registered",
                 icon: ClipboardList,
             },
             // {
@@ -228,22 +228,28 @@ export const sidebarItems: NavGroup[] = [
                 icon: LayoutDashboard,
             },
             {
-                id: "/cho-staff/vaccine-inventory",
-                title: "Vaccine Inventory",
-                url: "/cho-staff/vaccine-inventory",
+                id: "/cho-staff/vaccine",
+                title: "Vaccine",
+                url: "/cho-staff/vaccine?tab=inventory",
                 icon: PillBottle,
             },
+            // {
+            //     id: "/cho-staff/request-queue",
+            //     title: "Request Queue",
+            //     url: "/cho-staff/request-queue",
+            //     icon: Layers,
+            // },
+            // {
+            //     id: "/cho-staff/issuance",
+            //     title: "Issuance Processing",
+            //     url: "/cho-staff/issuance",
+            //     icon: FileText,
+            // },
             {
-                id: "/cho-staff/request-queue",
-                title: "Request Queue",
-                url: "/cho-staff/request-queue",
-                icon: Layers,
-            },
-            {
-                id: "/cho-staff/issuance",
-                title: "Issuance Processing",
-                url: "/cho-staff/issuance",
-                icon: FileText,
+                id: "/cho-staff/immunization",
+                title: "Immunization",
+                url: "/cho-staff/immunization?tab=verify",
+                icon: ClipboardCheck,
             },
             {
                 id: "/cho-staff/reports",
@@ -263,12 +269,12 @@ export const sidebarItems: NavGroup[] = [
                 url: "/cho-staff/messaging",
                 icon: MessageSquareText,
             },
-            {
-                id: "/cho-staff/validation",
-                title: "Validation",
-                url: "/cho-staff/validation",
-                icon: ClipboardCheck,
-            }
+            // {
+            //     id: "/cho-staff/validation",
+            //     title: "Validation",
+            //     url: "/cho-staff/validation",
+            //     icon: ClipboardCheck,
+            // }
             
         ],
     },

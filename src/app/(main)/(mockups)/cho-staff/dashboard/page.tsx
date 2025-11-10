@@ -40,7 +40,7 @@ export default function Page() {
                 </Card>
             </div>
 
-            <div className="mt-6 grid grid-cols-2 gap-3">
+            <div className="mt-6 grid grid-cols-1 gap-3">
                 <Card className="shadow-xs rounded-md gap-0 p-3 overflow-hidden h-120">
                     <div className="flex items-center justify-between">
                         <TypographyLarge>Stocks Alert</TypographyLarge>
@@ -109,53 +109,6 @@ export default function Page() {
                                 <div className="grid grid-cols-[1fr_auto] items-center gap-5">
                                     <Progress baseColor="bg-amber-600/10" progressColor="bg-amber-600" className="w-1/2" max={50} value={5} />
                                     {/* <TypographySmall className="font-normal text-[13px]">10 remaining doses</TypographySmall> */}
-                                </div>
-                            </div>
-                        </Card>
-                    </div>
-                </Card>
-
-                <Card className="shadow-xs rounded-md gap-0 p-3 overflow-hidden h-120">
-                    <div className="flex items-center justify-between">
-                        <TypographyLarge>Recent Reports</TypographyLarge>
-
-                        <Button variant="outline" className="cursor-pointer">
-                            <span>View Reports</span>
-                            <ChevronRight />
-                        </Button>
-                    </div>
-
-                    <div className="mt-4 space-y-1">
-                        <Card className="shadow-none rounded-sm hover:bg-secondary p-1.5 grid grid-cols-[auto_1fr] gap-3 cursor-pointer">
-                            <div className="size-9 flex items-center justify-center bg-primary/20 rounded">
-                                <ChartColumnBig className="size-5 text-primary" />
-                            </div>
-                            <div className="flex flex-col justify-center gap-1.5 leading-0">
-                                <div className="flex items-center justify-between">
-                                    <TypographySmall className="font-semibold">New Visayas</TypographySmall>
-                                    <TypographySmall className="font-semibold">Vaccinated: 150 </TypographySmall>
-                                </div>
-                            </div>
-                        </Card>
-                        <Card className="shadow-none rounded-sm hover:bg-secondary p-1.5 grid grid-cols-[auto_1fr] gap-3 cursor-pointer">
-                            <div className="size-9 flex items-center justify-center bg-primary/20 rounded">
-                                <ChartColumnBig className="size-5 text-primary" />
-                            </div>
-                            <div className="flex flex-col justify-center gap-1.5 leading-0">
-                                <div className="flex items-center justify-between">
-                                    <TypographySmall className="font-semibold">New Malitbog</TypographySmall>
-                                    <TypographySmall className="font-semibold">Vaccinated: 150 </TypographySmall>
-                                </div>
-                            </div>
-                        </Card>
-                        <Card className="shadow-none rounded-sm hover:bg-secondary p-1.5 grid grid-cols-[auto_1fr] gap-3 cursor-pointer">
-                            <div className="size-9 flex items-center justify-center bg-primary/20 rounded">
-                                <ChartColumnBig className="size-5 text-primary" />
-                            </div>
-                            <div className="flex flex-col justify-center gap-1.5 leading-0">
-                                <div className="flex items-center justify-between">
-                                    <TypographySmall className="font-semibold">New Pandan</TypographySmall>
-                                    <TypographySmall className="font-semibold">Vaccinated: 150 </TypographySmall>
                                 </div>
                             </div>
                         </Card>
