@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Building2, Command, Landmark, UserRound } from "lucide-react";
+import { Building2, Command, Landmark, SquareUserRound, UserRound } from "lucide-react";
 
 import { RegisterForm } from "../(main)/auth/_components/register-form";
 import { GoogleButton } from "../(main)/auth/_components/social-auth/google-button";
@@ -11,7 +11,7 @@ import SuccessRegistration from "./_components/success-registration";
 
 interface Props {
     searchParams?: Promise<{
-        type: "parent" | "bhw" | "cho";
+        type: "parent" | "staff";
         verification?: string;
         details?: string;
         success?: boolean;
@@ -36,11 +36,9 @@ export default async function Register({ searchParams }: Props) {
                     <div className="space-y-4 text-center">
                         {!success && (
                             <div className="font-medium tracking-tight">
-                                {type === "bhw"
-                                    ? "Barangay Health Worker"
-                                    : type === "cho"
-                                      ? "City Health Office"
-                                      : type === "parent"
+                                {type === "staff"
+                                    ? "User"
+                                    : type === "parent"
                                         ? "Parent"
                                         : "Choose"}{" "}
                                 Registration
@@ -54,10 +52,10 @@ export default async function Register({ searchParams }: Props) {
                     </div>
                     {type === "parent" ? (
                         <Registration />
-                    ) : type && ['cho', 'bhw'].includes(type) ? (
+                    ) : type === 'staff' ? (
                         <div className="space-y-4">
                             <RegisterForm />
-                            <GoogleButton className="w-full" variant="outline" />
+                            {/* <GoogleButton className="w-full" variant="outline" /> */}
                             <p className="text-muted-foreground text-center text-xs">
                                 Already have an account?{" "}
                                 <Link href="login" className="text-primary">
@@ -74,18 +72,18 @@ export default async function Register({ searchParams }: Props) {
                                         Parent Registration
                                     </Button>
                                 </Link>
-                                <Link href={"?type=bhw"} className="w-full">
+                                <Link href={"?type=staff"} className="w-full">
                                     <Button variant="outline" className="w-full h-12 cursor-pointer">
-                                        <Building2 className="size-5" />
-                                        Brangay Health Worker Registration
+                                        <SquareUserRound className="size-5" />
+                                        Staff Registration
                                     </Button>
                                 </Link>
-                                <Link href={"?type=cho"} className="w-full">
+                                {/* <Link href={"?type=cho"} className="w-full">
                                     <Button variant="outline" className="w-full h-12 cursor-pointer">
                                         <Landmark className="size-5" />
                                         City Health Office Registration
                                     </Button>
-                                </Link>
+                                </Link> */}
 
                                 <p className="text-muted-foreground text-center text-xs">
                                     Already have an account?{" "}

@@ -17,7 +17,8 @@ const FormSchema = z
         first_name: z.string().min(1, { message: 'Please enter your first name.'}),
         last_name: z.string().min(1, { message: 'Please enter your first name.'}),
         middle_name: z.string().optional(),
-        employee_type: z.enum([ 'staff', 'head' ]),
+        employee_type: z.enum([ 'bhw-staff', 'bhw-head', 'cho-staff', 'cho-head' ]),
+        username: z.string().min(1, { message: "Please enter your username." }).optional(),
         email: z.string().email({ message: "Please enter a valid email address." }).optional(),
         password: z.string().min(6, { message: "Password must be at least 6 characters." }),
         confirmPassword: z.string().min(6, { message: "Confirm Password must be at least 6 characters." }),
@@ -34,8 +35,9 @@ export function RegisterForm() {
             first_name: "John",
             last_name: "Doe",
             middle_name: "",
-            employee_type: "staff",
+            employee_type: undefined,
             email: "john.doe@gmail.com",
+            username: "johndoe",
             password: "12345678",
             confirmPassword: "12345678",
         },
@@ -54,7 +56,7 @@ export function RegisterForm() {
         // });
 
         toast.success('You have successfully registered.')
-        router.push(`/${sp.get('type')}-${form.getValues('employee_type')}/dashboard`)
+        router.push(`/${form.getValues('employee_type')}/dashboard`)
     };
 
     return (
@@ -70,22 +72,28 @@ export function RegisterForm() {
                     name="employee_type"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Employee Type</FormLabel>
-                            <Select defaultValue="staff">
+                            <FormLabel>User Type</FormLabel>
+                            <Select onValueChange={(value) => field.onChange(value)}>
                                 <FormControl>
                                     <SelectTrigger className="w-full rounded-sm">
-                                        <SelectValue placeholder="Select" />
+                                        <SelectValue placeholder="Select"/>
                                     </SelectTrigger>
                                 </FormControl>
                                 <SelectContent>
-                                    <SelectItem value="staff">Staff</SelectItem>
-                                    <SelectItem value="head">Head</SelectItem>
+                                    <SelectItem value="bhw-staff">BHW - Staff</SelectItem>
+                                    <SelectItem value="bhw-head">BHW - Head</SelectItem>
+                                    <SelectItem value="cho-staff">CHO - Staff</SelectItem>
+                                    <SelectItem value="cho-head">CHO - Head</SelectItem>
                                 </SelectContent>
                             </Select>
                             <FormMessage />
                         </FormItem>
                     )}
                 />
+
+                <div className="relative border-b border-border !my-8">
+                    <div className="absolute top-1/2 -translate-y-1/2 text-sm bg-background font-medium pr-3">Security Details</div>
+                </div>
 
                 <FormField
                     control={form.control}
@@ -106,6 +114,25 @@ export function RegisterForm() {
                         </FormItem>
                     )}
                 />
+
+                <FormField
+                    control={form.control}
+                    name="username"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>Username</FormLabel>
+                            <FormControl>
+                                <Input
+                                    id="username"
+                                    placeholder="Please enter atleast 6 characters"
+                                    {...field}
+                                />
+                            </FormControl>
+                            <FormMessage />
+                        </FormItem>
+                    )}
+                />
+
                 <FormField
                     control={form.control}
                     name="password"
