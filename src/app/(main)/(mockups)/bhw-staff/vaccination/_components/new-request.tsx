@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Modal, { ModalCloseButton, ModalTitle } from "@/components/ui/modal-spring";
 import { Plus, X } from "lucide-react";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import {
     Select,
     SelectContent,
@@ -16,10 +16,17 @@ import {
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import OverlayScrollbar from "@/components/orverlay-scrollbar";
+import { Label } from "@/components/ui/label";
 
 export default function NewRequest() {
     const [open, setOpen] = useState(false);
     const [requests, setRequests] = useState(1);
+
+    useEffect(() => {
+        if(open) {
+            setRequests(1)
+        }
+    }, [open])
 
     return (
         <Fragment>
@@ -32,7 +39,7 @@ export default function NewRequest() {
                 <ModalTitle>Request Vials</ModalTitle>
                 <ModalCloseButton onClick={() => setOpen(false)} />
 
-                <OverlayScrollbar className="max-h-[calc(100vh-30rem)]">
+                <OverlayScrollbar className="max-h-[calc(100vh-20rem)]">
                     <div className="space-y-3">
                         {Array.from({ length: requests }).map((_, index) => (
                             <RequestCard
@@ -89,40 +96,54 @@ const RequestCard = ({ isMoreRequest, onRemove }: RequestCardProps) => {
     return (
         <Card className="flex-row gap-3 rounded-sm p-3 shadow-xs">
             <div className="grow space-y-3">
-                <div className="flex grow items-center gap-3">
-                    <Select onValueChange={(value: keyof typeof vaccines) => setSelected(value)}>
-                        <SelectTrigger className="h-9 w-full rounded-sm">
-                            <SelectValue placeholder="Select">{selected && vaccines[selected]}</SelectValue>
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectGroup>
-                                <SelectLabel className="text-muted-foreground text-[13px]">Vaccine Types</SelectLabel>
-                                <SelectItem value="BCG">
-                                    BCG <small>(Bacillus-Calmette-Guerin)</small>
-                                </SelectItem>
-                                <SelectItem value="Hepatitis">Hepatitis B</SelectItem>
-                                <SelectItem value="Penta">Penta: DTwP-HepB-Hib</SelectItem>
-                                <SelectItem value="PCV">
-                                    PCV <small>(Pneumococcal Conjugate Vaccine)</small>
-                                </SelectItem>
-                                <SelectItem value="OPV">OPV</SelectItem>
-                                <SelectItem value="IPV">
-                                    IPV <small>(Inactivated Polio Vaccine)</small>
-                                </SelectItem>
-                                <SelectItem value="MR">
-                                    MR <small>(Measles - Rubella Vaccine)</small>
-                                </SelectItem>
-                                <SelectItem value="MMR">
-                                    MMR <small>(Measles - Mumps - Rubella Vaccine)</small>
-                                </SelectItem>
-                                <SelectItem value="Others">Others</SelectItem>
-                            </SelectGroup>
-                        </SelectContent>
-                    </Select>
+                <div className="space-y-4">
+                    <div className="space-y-1.5">
+                        <Label htmlFor="current">Vaccine</Label>
+                        <Select onValueChange={(value: keyof typeof vaccines) => setSelected(value)}>
+                            <SelectTrigger className="h-9 w-full rounded-sm">
+                                <SelectValue placeholder="Select">{selected && vaccines[selected]}</SelectValue>
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectGroup>
+                                    <SelectLabel className="text-muted-foreground text-[13px]">
+                                        Vaccine Types
+                                    </SelectLabel>
+                                    <SelectItem value="BCG">
+                                        BCG <small>(Bacillus-Calmette-Guerin)</small>
+                                    </SelectItem>
+                                    <SelectItem value="Hepatitis">Hepatitis B</SelectItem>
+                                    <SelectItem value="Penta">Penta: DTwP-HepB-Hib</SelectItem>
+                                    <SelectItem value="PCV">
+                                        PCV <small>(Pneumococcal Conjugate Vaccine)</small>
+                                    </SelectItem>
+                                    <SelectItem value="OPV">OPV</SelectItem>
+                                    <SelectItem value="IPV">
+                                        IPV <small>(Inactivated Polio Vaccine)</small>
+                                    </SelectItem>
+                                    <SelectItem value="MR">
+                                        MR <small>(Measles - Rubella Vaccine)</small>
+                                    </SelectItem>
+                                    <SelectItem value="MMR">
+                                        MMR <small>(Measles - Mumps - Rubella Vaccine)</small>
+                                    </SelectItem>
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
+                    </div>
 
-                    <Input placeholder="Qty" className="w-20" />
+                    {(selected != "default") && (
+                        <div className="grid grid-cols-2 gap-3">
+                            <div className="space-y-1.5">
+                                <Label htmlFor="current">Current Vials</Label>
+                                <Input id="current" defaultValue={0} readOnly />
+                            </div>
+                            <div className="space-y-1.5">
+                                <Label htmlFor="current">Suggested Vials</Label>
+                                <Input id="current" defaultValue={30} />
+                            </div>
+                        </div>
+                    )}
                 </div>
-                {selected == "Others" && (<Input placeholder="Please specify if others" className="w-full" />)}
             </div>
             {isMoreRequest && (
                 <div className="">
