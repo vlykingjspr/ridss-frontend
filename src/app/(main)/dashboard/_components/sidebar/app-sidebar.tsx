@@ -26,6 +26,7 @@ import { useRidsUserStore } from "@/stores/user";
 import { useEffect, useMemo } from "react";
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
+import SidebarDropDown from "./sidebar-dropdown";
 
 const data = {
     navSecondary: [
@@ -123,6 +124,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 </SidebarMenu>
             </SidebarHeader>
             <SidebarContent className="pb-10">
+                {selectedUser?.role === "bhw-head" && (<div className="px-2 mt-4">
+                    <SidebarDropDown />
+                </div>)}
                 <NavMain items={navigationTabs} />
                 {/* <NavDocuments items={data.documents} /> */}
                 {/* <NavSecondary items={data.navSecondary} className="mt-auto" /> */}

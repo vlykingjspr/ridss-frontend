@@ -63,4 +63,4 @@ export type ridsUserType = {
     role: string;
 }
 
-export const rootUser = users[0];
+export const rootUser = ridsUsers[3];

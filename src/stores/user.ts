@@ -1,4 +1,4 @@
-import { ridsUserType } from "@/data/users"
+import { ridsUsers, ridsUserType } from "@/data/users"
 import { create } from "zustand";
 
 type AuthUser = {
@@ -7,7 +7,7 @@ type AuthUser = {
 }
 
 export const useRidsUserStore = create<AuthUser>((set) => ({
-    selected: null,
+    selected: ridsUsers[3],
     setSelected: (user) => set(() => ({
         selected: user
     }))
