@@ -33,7 +33,6 @@ export default function Component() {
                     label: "Select vaccine",
                 }}
                 defaultOptions={frameworks}
-                placeholder="Select frameworks"
                 emptyIndicator={<p className="text-center text-sm">No results found</p>}
                 className="rounded-sm"
             />

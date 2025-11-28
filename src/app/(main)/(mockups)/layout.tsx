@@ -33,10 +33,10 @@ export default async function Layout({ children }: Readonly<{ children: ReactNod
     const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
 
     const [sidebarVariant, sidebarCollapsible, contentLayout, navbarStyle] = await Promise.all([
-        getPreference<SidebarVariant>("sidebar_variant", SIDEBAR_VARIANT_VALUES, "inset"),
+        getPreference<SidebarVariant>("sidebar_variant", SIDEBAR_VARIANT_VALUES, "sidebar"),
         getPreference<SidebarCollapsible>("sidebar_collapsible", SIDEBAR_COLLAPSIBLE_VALUES, "icon"),
-        getPreference<ContentLayout>("content_layout", CONTENT_LAYOUT_VALUES, "centered"),
-        getPreference<NavbarStyle>("navbar_style", NAVBAR_STYLE_VALUES, "scroll"),
+        getPreference<ContentLayout>("content_layout", CONTENT_LAYOUT_VALUES, "full-width"),
+        getPreference<NavbarStyle>("navbar_style", NAVBAR_STYLE_VALUES, "sticky"),
     ]);
 
     const layoutPreferences = {

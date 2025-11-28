@@ -53,7 +53,7 @@ const NavItemExpanded = ({
                             disabled={item.comingSoon}
                             isActive={isActive(item.id, item.subItems)}
                             tooltip={item.title}
-                            className="data-[active=true]:!bg-primary data-[active=true]:!text-primary-foreground h-10 data-[active=false]:text-muted-foreground/70 data-[active=false]:hover:bg-primary/10 data-[active=false]:hover:text-primary"
+                            className="data-[active=true]:!bg-primary data-[active=true]:!text-primary-foreground h-10 data-[active=false]:text-muted-foreground/70 data-[active=false]:hover:bg-primary/10 data-[active=false]:hover:text-black-primary"
                         >
                             {item.icon && <item.icon />}
                             <span>{item.title}</span>
@@ -66,7 +66,7 @@ const NavItemExpanded = ({
                             aria-disabled={item.comingSoon}
                             isActive={isActive(item.id)}
                             tooltip={item.title}
-                            className="data-[active=true]:!bg-primary data-[active=true]:!text-primary-foreground h-10 data-[active=false]:text-muted-foreground/70 data-[active=false]:hover:bg-primary/10 data-[active=false]:hover:text-primary"
+                            className="data-[active=true]:!bg-primary data-[active=true]:!text-primary-foreground h-10 data-[active=false]:text-muted-foreground/70 data-[active=false]:hover:bg-primary/10 data-[active=false]:hover:text-black-primary"
                         >
                             <Link href={item.url} target={item.newTab ? "_blank" : undefined}>
                                 {item.icon && <item.icon />}
@@ -129,7 +129,7 @@ const NavItemCollapsed = ({
                             <SidebarMenuSubButton
                                 key={subItem.title}
                                 asChild
-                                className="focus-visible:ring-0 data-[active=true]:!bg-primary data-[active=true]:!text-primary-foreground h-10 data-[active=false]:text-muted-foreground/70 data-[active=false]:hover:bg-primary/10 data-[active=false]:hover:text-primary"
+                                className="focus-visible:ring-0 data-[active=true]:!bg-primary data-[active=true]:!text-primary-foreground h-10 data-[active=false]:text-muted-foreground/70 data-[active=false]:hover:bg-primary/10 data-[active=false]:hover:text-black-primary"
                                 aria-disabled={subItem.comingSoon}
                                 isActive={isActive(subItem.url)}
                             >
@@ -180,7 +180,7 @@ export function NavMain({ items }: NavMainProps) {
                                                     aria-disabled={item.comingSoon}
                                                     tooltip={item.title}
                                                     isActive={isItemActive(item.id)}
-                                                    className="data-[active=true]:!bg-primary data-[active=true]:!text-primary-foreground h-10 data-[active=false]:text-muted-foreground/70 data-[active=false]:hover:bg-primary/10 data-[active=false]:hover:text-primary"
+                                                    className="data-[active=true]:!bg-primary data-[active=true]:!text-primary-foreground h-10 data-[active=false]:text-muted-foreground/70 data-[active=false]:hover:bg-primary/10 data-[active=false]:hover:text-black-primary"
                                                 >
                                                     <Link href={item.url} target={item.newTab ? "_blank" : undefined}>
                                                         {item.icon && <item.icon />}

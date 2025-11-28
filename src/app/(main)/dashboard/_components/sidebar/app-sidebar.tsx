@@ -66,25 +66,20 @@ const data = {
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+    const pathname = usePathname()
+    const activeUser = ridsUsers.find((u) => pathname.startsWith('/'+u.role))!
+
     const selectedUser = useRidsUserStore((state) => state.selected)
     const setSelectedUser = useRidsUserStore((state) => state.setSelected)
     const isCollapsed = useSidebar().state
-    const pathname = usePathname()
 
     const navigationTabs = useMemo(() => {
-        if(selectedUser) {
-            return sidebarItems.filter((tabs) => tabs.id === selectedUser.id)
-        }
-        return []
+        return sidebarItems.filter((tabs) => tabs.id === activeUser.id)
     }, [selectedUser])
 
     useEffect(() => {
-        if(!selectedUser) {
-            const activeUser = ridsUsers.find((u) => pathname.startsWith('/'+u.role))
-            if(activeUser)
-                setSelectedUser(activeUser)
-        }
-    }, [selectedUser])
+        setSelectedUser(activeUser)
+    }, [])
 
     return (
         <Sidebar {...props}>

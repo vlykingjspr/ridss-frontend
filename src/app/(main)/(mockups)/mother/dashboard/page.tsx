@@ -3,11 +3,12 @@ import { TypographyH1, TypographyH3, TypographyLarge, TypographyLead, Typography
 import FingerPrint from "./_components/finger-print";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 interface Props {
     searchParams?: Promise<{ fingerprint: boolean }>
 }
-export default async function Page({searchParams}: Props) {
+export default async function Page({ searchParams }: Props) {
     const sp = await searchParams
     const fp = sp?.fingerprint
 
@@ -63,24 +64,28 @@ export default async function Page({searchParams}: Props) {
 
                 <div className="space-y-1.5">
                     <Card className="p-0 gap-0 cursor-pointer border-none shadow-none bg-primary/5 divide-y divide-primary/10">
-                        <div className="flex items-center p-3 hover:bg-primary/15 rounded-t-[inherit] transition-colors">
-                            <TypographySmall className="text-base">Jon Doe</TypographySmall>
-                            <Button variant="ghost" className="h-7 ml-auto pointer-events-none !p-0">
-                                <div className="text-muted-foreground">
-                                    View QR Code
-                                </div>
-                                <ChevronRight />
-                            </Button>
-                        </div>
-                        <div className="flex items-center p-3 hover:bg-primary/15 rounded-b-[inherit] transition-colors">
-                            <TypographySmall className="text-base">Ann Doe</TypographySmall>
-                            <Button variant="ghost" className="h-7 ml-auto pointer-events-none !p-0">
-                                <div className="text-muted-foreground">
-                                    View QR Code
-                                </div>
-                                <ChevronRight />
-                            </Button>
-                        </div>
+                        <Link href="/mother/qr_code?child=John Doe" className="rounded-[inherit]">
+                            <div className="flex items-center p-3 hover:bg-primary/15 rounded-t-[inherit] transition-colors">
+                                <TypographySmall className="text-base">Jon Doe</TypographySmall>
+                                <Button variant="ghost" className="h-7 ml-auto pointer-events-none !p-0">
+                                    <div className="text-muted-foreground">
+                                        View QR Code
+                                    </div>
+                                    <ChevronRight />
+                                </Button>
+                            </div>
+                        </Link>
+                        <Link href="/mother/qr_code?child=Anna Doe" className="rounded-[inherit]">
+                            <div className="flex items-center p-3 hover:bg-primary/15 rounded-b-[inherit] transition-colors">
+                                <TypographySmall className="text-base">Ann Doe</TypographySmall>
+                                <Button variant="ghost" className="h-7 ml-auto pointer-events-none !p-0">
+                                    <div className="text-muted-foreground">
+                                        View QR Code
+                                    </div>
+                                    <ChevronRight />
+                                </Button>
+                            </div>
+                        </Link>
                     </Card>
                 </div>
 

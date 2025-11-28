@@ -13,7 +13,7 @@ export default function NewBarangay() {
 
     return (
         <Fragment>
-            <Button className="" onClick={() => setOpen(true)}>
+            <Button className="h-10 px-4!" onClick={() => setOpen(true)}>
                 <Building2 />
                 <span>Create Barangay</span>
             </Button>

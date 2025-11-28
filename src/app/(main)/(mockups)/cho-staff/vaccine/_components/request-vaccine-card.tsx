@@ -64,7 +64,7 @@ export default function WithdrawalCard({ label }: Props) {
                             <div className=""> <TypographySmall>20</TypographySmall> </div>
                             <div className=""> <TypographySmall>100</TypographySmall> </div>
                             <div className="flex items-center justify-center">
-                                <Button className="bg-green-600 hover:bg-green-600/90 h-8">
+                                <Button variant="outline" className="border-green-600/70 text-green-600/90 h-8">
                                     Approve
                                 </Button>
                             </div>
@@ -74,7 +74,7 @@ export default function WithdrawalCard({ label }: Props) {
                             <div className=""> <TypographySmall>20</TypographySmall> </div>
                             <div className=""> <TypographySmall>100</TypographySmall> </div>
                             <div className="flex items-center justify-center">
-                                <Button className="bg-green-600 hover:bg-green-600/90 h-8">
+                                <Button variant="outline" className="border-green-600/70 text-green-600/90 h-8">
                                     Approve
                                 </Button>
                             </div>
@@ -84,7 +84,7 @@ export default function WithdrawalCard({ label }: Props) {
                             <div className=""> <TypographySmall>20</TypographySmall> </div>
                             <div className=""> <TypographySmall>100</TypographySmall> </div>
                             <div className="flex items-center justify-center">
-                                <Button className="bg-green-600 hover:bg-green-600/90 h-8">
+                                <Button variant="outline" className="border-green-600/70 text-green-600/90 h-8">
                                     Approve
                                 </Button>
                             </div>
@@ -94,7 +94,7 @@ export default function WithdrawalCard({ label }: Props) {
             </div>
 
             <div className="flex justify-end items-center mt-4">
-                <Button className="h-10 px-5">
+                <Button className="h-10 px-5 bg-green-600 hover:bg-green-600/90">
                     <span>{label}</span>
                 </Button>
             </div>

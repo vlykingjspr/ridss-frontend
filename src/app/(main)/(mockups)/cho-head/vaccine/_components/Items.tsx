@@ -1,7 +1,9 @@
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Ellipsis, Info, PenLine } from "lucide-react";
 import { TypographySmall } from "@/components/ui/typography";
-import { Eye, PenLine, Plus } from "lucide-react";
+import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
+
 import NewVaccine from "./new-vaccine";
 
 export default function VaccineItems() {
@@ -26,12 +28,19 @@ export default function VaccineItems() {
                                 <div className=""> <TypographySmall>{i.dosage}</TypographySmall> </div>
                                 <div className=""> <TypographySmall>{i.expiration}</TypographySmall> </div>
                                 <div className="flex items-center justify-center gap-2">
-                                    <Button variant={'outline'} size="icon" className="size-8">
-                                        <Eye />
-                                    </Button>
-                                    <Button variant={'outline'} size="icon" className="size-8">
-                                        <PenLine />
-                                    </Button>
+                                    <Menubar className="p-0 shadow-none h-fit w-fit border-none">
+                                        <MenubarMenu>
+                                            <MenubarTrigger asChild>
+                                                <Button variant="outline" size="icon" className="size-8">
+                                                    <Ellipsis />
+                                                </Button>
+                                            </MenubarTrigger>
+                                            <MenubarContent align="end" alignOffset={0} sideOffset={1} className="min-w-42">
+                                                <MenubarItem className="h-10 px-3"> <Info className="size-4.5 mr-2" /> View Details</MenubarItem>
+                                                <MenubarItem className="h-10 px-3"> <PenLine className="size-4.5 mr-2" /> Edit Vaccine</MenubarItem>
+                                            </MenubarContent>
+                                        </MenubarMenu>
+                                    </Menubar>
                                 </div>
                             </div>  
                         ))}

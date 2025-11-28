@@ -2,7 +2,7 @@ import SearchInput from "@/components/search-input";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { TypographySmall } from "@/components/ui/typography";
-import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, Edit, Eye, Settings2, Trash2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, Edit, Ellipsis, Eye, Info, Settings2, Trash, Trash2, UserRoundPen } from "lucide-react";
 import { Menubar, MenubarContent, MenubarItem, MenubarLabel, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
 
 export default function Registered() {
@@ -58,7 +58,7 @@ export default function Registered() {
                         <TypographySmall className="px-4">Sex</TypographySmall>
                         <TypographySmall className="px-4">Age</TypographySmall>
                         <TypographySmall className="px-4">Status</TypographySmall>
-                        <TypographySmall className="px-4 text-center">Action</TypographySmall>
+                        <TypographySmall className="px-4 text-center"></TypographySmall>
                     </div>
                 </div>
                 <div className="border-border divide-border divide-y rounded-b-[inherit] border border-t-0">
@@ -77,15 +77,20 @@ export default function Registered() {
                                 </div>
                             </div>
                             <div className="flex justify-center gap-3">
-                                <Button size="icon" variant="outline" className="size-7 cursor-pointer">
-                                    <Eye />
-                                </Button>
-                                <Button size="icon" variant="outline" className="size-7 cursor-pointer">
-                                    <Edit />
-                                </Button>
-                                <Button size="icon" variant="outline" className="size-7 cursor-pointer">
-                                    <Trash2 />
-                                </Button>
+                                <Menubar className="p-0 shadow-none h-fit w-fit border-none">
+                                    <MenubarMenu>
+                                        <MenubarTrigger asChild>
+                                            <Button variant="outline" size="icon" className="size-8">
+                                                <Ellipsis />
+                                            </Button>
+                                        </MenubarTrigger>
+                                        <MenubarContent align="end" alignOffset={0} sideOffset={1} className="min-w-42">
+                                            <MenubarItem className="h-10 px-3"> <Info className="mr-2 size-4.5" /> View Details</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <UserRoundPen className="mr-2 size-4.5" /> Edit User</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <Trash2 className="mr-2 size-4.5" /> Remove User</MenubarItem>
+                                        </MenubarContent>
+                                    </MenubarMenu>
+                                </Menubar>
                             </div>
                         </div>
                     ))}
