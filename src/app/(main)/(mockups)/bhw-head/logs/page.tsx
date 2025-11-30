@@ -3,6 +3,8 @@ import { Card } from "@/components/ui/card";
 import { TypographyLarge, TypographySmall } from "@/components/ui/typography";
 import { format } from "date-fns";
 import { Eye } from "lucide-react";
+import { Logs } from "./data";
+
 
 export default function Page() {
     return (
@@ -21,10 +23,10 @@ export default function Page() {
                     <div className="rounded-b-[inherit] border border-border divide-y divide-border">
                         {Logs.map((log) => (
                             <div key={log.id} className="h-12 grid grid-cols-[13rem_repeat(3,_1fr)_5rem] items-center [&>div]:px-4">
-                                <div className="leading-4"> <TypographySmall>{format(log.date, "MMM d, y hh:mm a")}</TypographySmall> </div>
-                                <div className=""> <TypographySmall>{log.user}</TypographySmall> </div>
-                                <div className=""> <TypographySmall>{log.action}</TypographySmall> </div>
-                                <div className=""> <TypographySmall className="line-clamp-1">{log.details}</TypographySmall> </div>
+                                <div className="leading-4"> <TypographySmall>{format(new Date(), "MMM d, y hh:mm a")}</TypographySmall> </div>
+                                <div className=""> <TypographySmall>You</TypographySmall> </div>
+                                <div className=""> <TypographySmall>Approve Request</TypographySmall> </div>
+                                <div className=""> <TypographySmall className="line-clamp-1">Approved vaccine request for BCG and is approval for CHO.</TypographySmall> </div>
                                 <div className="flex items-center gap-3">
                                     <Button size="icon" className="size-7" variant="outline">
                                         <Eye />
@@ -42,48 +44,3 @@ export default function Page() {
         </div>
     )
 }
-
-export const Logs = [
-    {
-        id: 6,
-        date: new Date(),
-        user: 'You',
-        action: 'Approve Request',
-        details: 'Approved vaccine request for BCG and is approval for CHO.'
-    },
-    {
-        id: 1,
-        date: new Date(),
-        user: 'John Doe',
-        action: 'Vaccine Request',
-        details: 'Submitted approval for BCG vaccine request.'
-    },
-    {
-        id: 2,
-        date: new Date(),
-        user: 'Mark Vin',
-        action: 'Vaccine Request',
-        details: ' Submitted an approval for Hepatitis B vaccine request.'
-    },
-    {
-        id: 3,
-        date: new Date(),
-        user: 'Joanna Sy',
-        action: 'Vaccine Request',
-        details: ' Submitted an approval for IPV vaccine request.'
-    },
-    {
-        id: 4,
-        date: new Date(),
-        user: 'Lorry Jane Tubby',
-        action: 'Vaccine Request',
-        details: ' Submitted an approval for OPV vaccine request.'
-    },
-    {
-        id: 5,
-        date: new Date(),
-        user: 'Aspire Race',
-        action: 'Vaccine Request',
-        details: ' Submitted an approval for Pentavalent 1 vaccine request.'
-    },
-]
