@@ -59,8 +59,8 @@ export default function PendingRegistration() {
                         </div>
                         <div className="max-h-120 border border-border rounded-b-[inherit] divide-y divide-border">
                             <div className="h-11 grid grid-cols-[repeat(3,_1fr)_10rem] items-center [&>div]:px-4">
-                                <div className=""> <TypographySmall>John Doe</TypographySmall> </div>
-                                <div className=""> <TypographySmall>Montana Doe</TypographySmall> </div>
+                                <div className=""> <TypographySmall>John Ramos</TypographySmall> </div>
+                                <div className=""> <TypographySmall>Montana Ramos</TypographySmall> </div>
                                 <div className=""> <TypographySmall>For Approval</TypographySmall> </div>
                                 <div className="flex items-center justify-center gap-3">
                                     <TooltipComponent title="Approve">
@@ -71,8 +71,8 @@ export default function PendingRegistration() {
                                 </div>
                             </div>
                             <div className="h-11 grid grid-cols-[repeat(3,_1fr)_10rem] items-center [&>div]:px-4">
-                                <div className=""> <TypographySmall>John Doe</TypographySmall> </div>
-                                <div className=""> <TypographySmall>Montana Doe</TypographySmall> </div>
+                                <div className=""> <TypographySmall>John Javier</TypographySmall> </div>
+                                <div className=""> <TypographySmall>Montana Javier</TypographySmall> </div>
                                 <div className=""> <TypographySmall>For Approval</TypographySmall> </div>
                                 <div className="flex items-center justify-center gap-3">
                                     <TooltipComponent title="Approve">
@@ -83,8 +83,92 @@ export default function PendingRegistration() {
                                 </div>
                             </div>
                             <div className="h-11 grid grid-cols-[repeat(3,_1fr)_10rem] items-center [&>div]:px-4">
-                                <div className=""> <TypographySmall>John Doe</TypographySmall> </div>
-                                <div className=""> <TypographySmall>Montana Doe</TypographySmall> </div>
+                                <div className=""> <TypographySmall>John Mercado</TypographySmall> </div>
+                                <div className=""> <TypographySmall>Montana Mercado</TypographySmall> </div>
+                                <div className=""> <TypographySmall>For Approval</TypographySmall> </div>
+                                <div className="flex items-center justify-center gap-3">
+                                    <TooltipComponent title="Approve">
+                                        <Button size="icon" className="size-7 bg-green-600 hover:bg-green-600/90">
+                                            <Check />
+                                        </Button>
+                                    </TooltipComponent>
+                                </div>
+                            </div>
+                             <div className="h-11 grid grid-cols-[repeat(3,_1fr)_10rem] items-center [&>div]:px-4">
+                                <div className=""> <TypographySmall>John Navarro</TypographySmall> </div>
+                                <div className=""> <TypographySmall>Montana Navarro</TypographySmall> </div>
+                                <div className=""> <TypographySmall>For Approval</TypographySmall> </div>
+                                <div className="flex items-center justify-center gap-3">
+                                    <TooltipComponent title="Approve">
+                                        <Button size="icon" className="size-7 bg-green-600 hover:bg-green-600/90">
+                                            <Check />
+                                        </Button>
+                                    </TooltipComponent>
+                                </div>
+                            </div>
+                            <div className="h-11 grid grid-cols-[repeat(3,_1fr)_10rem] items-center [&>div]:px-4">
+                                <div className=""> <TypographySmall>John Castillo</TypographySmall> </div>
+                                <div className=""> <TypographySmall>Montana Castillo</TypographySmall> </div>
+                                <div className=""> <TypographySmall>For Approval</TypographySmall> </div>
+                                <div className="flex items-center justify-center gap-3">
+                                    <TooltipComponent title="Approve">
+                                        <Button size="icon" className="size-7 bg-green-600 hover:bg-green-600/90">
+                                            <Check />
+                                        </Button>
+                                    </TooltipComponent>
+                                </div>
+                            </div>
+                            <div className="h-11 grid grid-cols-[repeat(3,_1fr)_10rem] items-center [&>div]:px-4">
+                                <div className=""> <TypographySmall>John Ramirez</TypographySmall> </div>
+                                <div className=""> <TypographySmall>Montana Ramirez</TypographySmall> </div>
+                                <div className=""> <TypographySmall>For Approval</TypographySmall> </div>
+                                <div className="flex items-center justify-center gap-3">
+                                    <TooltipComponent title="Approve">
+                                        <Button size="icon" className="size-7 bg-green-600 hover:bg-green-600/90">
+                                            <Check />
+                                        </Button>
+                                    </TooltipComponent>
+                                </div>
+                            </div>
+                             <div className="h-11 grid grid-cols-[repeat(3,_1fr)_10rem] items-center [&>div]:px-4">
+                                <div className=""> <TypographySmall>John Reyes</TypographySmall> </div>
+                                <div className=""> <TypographySmall>Montana Reyes</TypographySmall> </div>
+                                <div className=""> <TypographySmall>For Approval</TypographySmall> </div>
+                                <div className="flex items-center justify-center gap-3">
+                                    <TooltipComponent title="Approve">
+                                        <Button size="icon" className="size-7 bg-green-600 hover:bg-green-600/90">
+                                            <Check />
+                                        </Button>
+                                    </TooltipComponent>
+                                </div>
+                            </div>
+                            <div className="h-11 grid grid-cols-[repeat(3,_1fr)_10rem] items-center [&>div]:px-4">
+                                <div className=""> <TypographySmall>John Cruz</TypographySmall> </div>
+                                <div className=""> <TypographySmall>Montana Cruz</TypographySmall> </div>
+                                <div className=""> <TypographySmall>For Approval</TypographySmall> </div>
+                                <div className="flex items-center justify-center gap-3">
+                                    <TooltipComponent title="Approve">
+                                        <Button size="icon" className="size-7 bg-green-600 hover:bg-green-600/90">
+                                            <Check />
+                                        </Button>
+                                    </TooltipComponent>
+                                </div>
+                            </div>
+                            <div className="h-11 grid grid-cols-[repeat(3,_1fr)_10rem] items-center [&>div]:px-4">
+                                <div className=""> <TypographySmall>John Santos</TypographySmall> </div>
+                                <div className=""> <TypographySmall>Maria Santos</TypographySmall> </div>
+                                <div className=""> <TypographySmall>For Approval</TypographySmall> </div>
+                                <div className="flex items-center justify-center gap-3">
+                                    <TooltipComponent title="Approve">
+                                        <Button size="icon" className="size-7 bg-green-600 hover:bg-green-600/90">
+                                            <Check />
+                                        </Button>
+                                    </TooltipComponent>
+                                </div>
+                            </div>
+                            <div className="h-11 grid grid-cols-[repeat(3,_1fr)_10rem] items-center [&>div]:px-4">
+                                <div className=""> <TypographySmall>John Fernandez</TypographySmall> </div>
+                                <div className=""> <TypographySmall>Montana Fernandez</TypographySmall> </div>
                                 <div className=""> <TypographySmall>For Approval</TypographySmall> </div>
                                 <div className="flex items-center justify-center gap-3">
                                     <TooltipComponent title="Approve">
@@ -98,7 +182,7 @@ export default function PendingRegistration() {
                     </Card>
             <div className="flex items-center px-4">
                 <div className="">
-                    <TypographySmall className="text-muted-foreground">2 of 50</TypographySmall>
+                    <TypographySmall className="text-muted-foreground">10 of 50</TypographySmall>
                 </div>
                 <div className="mt-4 ml-auto flex items-center gap-2">
                     <Button className="" variant={"outline"}>

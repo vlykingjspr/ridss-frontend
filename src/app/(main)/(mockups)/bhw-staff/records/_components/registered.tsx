@@ -62,9 +62,9 @@ export default function Registered() {
                     </div>
                 </div>
                 <div className="border-border divide-border divide-y rounded-b-[inherit] border border-t-0">
-                    {Array.from({ length: 2 }).map((_, index) => (
+                    
                         <div
-                            key={index}
+                            // key={index}
                             className="hover:bg-secondary grid h-11 w-full grid-cols-[repeat(5,_1fr)] items-center transition duration-200"
                         >
                             <div className="line-clamp-1 px-4 text-[15px]">John Doe</div>
@@ -93,12 +93,281 @@ export default function Registered() {
                                 </Menubar>
                             </div>
                         </div>
-                    ))}
+                        <div
+                            // key={index}
+                            className="hover:bg-secondary grid h-11 w-full grid-cols-[repeat(5,_1fr)] items-center transition duration-200"
+                        >
+                            <div className="line-clamp-1 px-4 text-[15px]">Jenny Smith</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">Female</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">10 months</div>
+                            <div className="px-4 text-[15px]">
+                                <div className="shad ow-xs text-muted-foreground border-border flex w-fit items-center gap-2 rounded-full border px-2 py-1 text-xs font-medium">
+                                    <div className="size-2 rounded-full bg-green-600"></div>
+                                    <span className="">Active</span>
+                                </div>
+                            </div>
+                            <div className="flex justify-center gap-3">
+                                <Menubar className="p-0 shadow-none h-fit w-fit border-none">
+                                    <MenubarMenu>
+                                        <MenubarTrigger asChild>
+                                            <Button variant="outline" size="icon" className="size-8">
+                                                <Ellipsis />
+                                            </Button>
+                                        </MenubarTrigger>
+                                        <MenubarContent align="end" alignOffset={0} sideOffset={1} className="min-w-42">
+                                            <MenubarItem className="h-10 px-3"> <Info className="mr-2 size-4.5" /> View Details</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <UserRoundPen className="mr-2 size-4.5" /> Edit User</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <Trash2 className="mr-2 size-4.5" /> Remove User</MenubarItem>
+                                        </MenubarContent>
+                                    </MenubarMenu>
+                                </Menubar>
+                            </div>
+                        </div>
+                   <div
+                            // key={index}
+                            className="hover:bg-secondary grid h-11 w-full grid-cols-[repeat(5,_1fr)] items-center transition duration-200"
+                        >
+                            <div className="line-clamp-1 px-4 text-[15px]">Jerry Juan</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">Male</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">1 yr/s</div>
+                            <div className="px-4 text-[15px]">
+                                <div className="shad ow-xs text-muted-foreground border-border flex w-fit items-center gap-2 rounded-full border px-2 py-1 text-xs font-medium">
+                                    <div className="size-2 rounded-full bg-green-600"></div>
+                                    <span className="">Active</span>
+                                </div>
+                            </div>
+                            <div className="flex justify-center gap-3">
+                                <Menubar className="p-0 shadow-none h-fit w-fit border-none">
+                                    <MenubarMenu>
+                                        <MenubarTrigger asChild>
+                                            <Button variant="outline" size="icon" className="size-8">
+                                                <Ellipsis />
+                                            </Button>
+                                        </MenubarTrigger>
+                                        <MenubarContent align="end" alignOffset={0} sideOffset={1} className="min-w-42">
+                                            <MenubarItem className="h-10 px-3"> <Info className="mr-2 size-4.5" /> View Details</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <UserRoundPen className="mr-2 size-4.5" /> Edit User</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <Trash2 className="mr-2 size-4.5" /> Remove User</MenubarItem>
+                                        </MenubarContent>
+                                    </MenubarMenu>
+                                </Menubar>
+                            </div>
+                        </div>
+                        <div
+                            // key={index}
+                            className="hover:bg-secondary grid h-11 w-full grid-cols-[repeat(5,_1fr)] items-center transition duration-200"
+                        >
+                            <div className="line-clamp-1 px-4 text-[15px]">Juan De Guzman</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">Male</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">1 yr/s</div>
+                            <div className="px-4 text-[15px]">
+                                <div className="shad ow-xs text-muted-foreground border-border flex w-fit items-center gap-2 rounded-full border px-2 py-1 text-xs font-medium">
+                                    <div className="size-2 rounded-full bg-green-600"></div>
+                                    <span className="">Active</span>
+                                </div>
+                            </div>
+                            <div className="flex justify-center gap-3">
+                                <Menubar className="p-0 shadow-none h-fit w-fit border-none">
+                                    <MenubarMenu>
+                                        <MenubarTrigger asChild>
+                                            <Button variant="outline" size="icon" className="size-8">
+                                                <Ellipsis />
+                                            </Button>
+                                        </MenubarTrigger>
+                                        <MenubarContent align="end" alignOffset={0} sideOffset={1} className="min-w-42">
+                                            <MenubarItem className="h-10 px-3"> <Info className="mr-2 size-4.5" /> View Details</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <UserRoundPen className="mr-2 size-4.5" /> Edit User</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <Trash2 className="mr-2 size-4.5" /> Remove User</MenubarItem>
+                                        </MenubarContent>
+                                    </MenubarMenu>
+                                </Menubar>
+                            </div>
+                        </div>
+                        <div
+                            // key={index}
+                            className="hover:bg-secondary grid h-11 w-full grid-cols-[repeat(5,_1fr)] items-center transition duration-200"
+                        >
+                            <div className="line-clamp-1 px-4 text-[15px]">Maria Sierra</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">Female</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">5 months</div>
+                            <div className="px-4 text-[15px]">
+                                <div className="shad ow-xs text-muted-foreground border-border flex w-fit items-center gap-2 rounded-full border px-2 py-1 text-xs font-medium">
+                                    <div className="size-2 rounded-full bg-green-600"></div>
+                                    <span className="">Active</span>
+                                </div>
+                            </div>
+                            <div className="flex justify-center gap-3">
+                                <Menubar className="p-0 shadow-none h-fit w-fit border-none">
+                                    <MenubarMenu>
+                                        <MenubarTrigger asChild>
+                                            <Button variant="outline" size="icon" className="size-8">
+                                                <Ellipsis />
+                                            </Button>
+                                        </MenubarTrigger>
+                                        <MenubarContent align="end" alignOffset={0} sideOffset={1} className="min-w-42">
+                                            <MenubarItem className="h-10 px-3"> <Info className="mr-2 size-4.5" /> View Details</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <UserRoundPen className="mr-2 size-4.5" /> Edit User</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <Trash2 className="mr-2 size-4.5" /> Remove User</MenubarItem>
+                                        </MenubarContent>
+                                    </MenubarMenu>
+                                </Menubar>
+                            </div>
+                        </div>
+                        <div
+                            // key={index}
+                            className="hover:bg-secondary grid h-11 w-full grid-cols-[repeat(5,_1fr)] items-center transition duration-200"
+                        >
+                            <div className="line-clamp-1 px-4 text-[15px]">Mary Mae</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">Female</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">8 months</div>
+                            <div className="px-4 text-[15px]">
+                                <div className="shad ow-xs text-muted-foreground border-border flex w-fit items-center gap-2 rounded-full border px-2 py-1 text-xs font-medium">
+                                    <div className="size-2 rounded-full bg-green-600"></div>
+                                    <span className="">Active</span>
+                                </div>
+                            </div>
+                            <div className="flex justify-center gap-3">
+                                <Menubar className="p-0 shadow-none h-fit w-fit border-none">
+                                    <MenubarMenu>
+                                        <MenubarTrigger asChild>
+                                            <Button variant="outline" size="icon" className="size-8">
+                                                <Ellipsis />
+                                            </Button>
+                                        </MenubarTrigger>
+                                        <MenubarContent align="end" alignOffset={0} sideOffset={1} className="min-w-42">
+                                            <MenubarItem className="h-10 px-3"> <Info className="mr-2 size-4.5" /> View Details</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <UserRoundPen className="mr-2 size-4.5" /> Edit User</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <Trash2 className="mr-2 size-4.5" /> Remove User</MenubarItem>
+                                        </MenubarContent>
+                                    </MenubarMenu>
+                                </Menubar>
+                            </div>
+                        </div>
+                          <div
+                            // key={index}
+                            className="hover:bg-secondary grid h-11 w-full grid-cols-[repeat(5,_1fr)] items-center transition duration-200"
+                        >
+                            <div className="line-clamp-1 px-4 text-[15px]">Jerry Juan</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">Male</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">1 yr/s</div>
+                            <div className="px-4 text-[15px]">
+                                <div className="shad ow-xs text-muted-foreground border-border flex w-fit items-center gap-2 rounded-full border px-2 py-1 text-xs font-medium">
+                                    <div className="size-2 rounded-full bg-green-600"></div>
+                                    <span className="">Active</span>
+                                </div>
+                            </div>
+                            <div className="flex justify-center gap-3">
+                                <Menubar className="p-0 shadow-none h-fit w-fit border-none">
+                                    <MenubarMenu>
+                                        <MenubarTrigger asChild>
+                                            <Button variant="outline" size="icon" className="size-8">
+                                                <Ellipsis />
+                                            </Button>
+                                        </MenubarTrigger>
+                                        <MenubarContent align="end" alignOffset={0} sideOffset={1} className="min-w-42">
+                                            <MenubarItem className="h-10 px-3"> <Info className="mr-2 size-4.5" /> View Details</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <UserRoundPen className="mr-2 size-4.5" /> Edit User</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <Trash2 className="mr-2 size-4.5" /> Remove User</MenubarItem>
+                                        </MenubarContent>
+                                    </MenubarMenu>
+                                </Menubar>
+                            </div>
+                        </div>
+                        <div
+                            // key={index}
+                            className="hover:bg-secondary grid h-11 w-full grid-cols-[repeat(5,_1fr)] items-center transition duration-200"
+                        >
+                            <div className="line-clamp-1 px-4 text-[15px]">Juan De Guzman</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">Male</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">1 yr/s</div>
+                            <div className="px-4 text-[15px]">
+                                <div className="shad ow-xs text-muted-foreground border-border flex w-fit items-center gap-2 rounded-full border px-2 py-1 text-xs font-medium">
+                                    <div className="size-2 rounded-full bg-green-600"></div>
+                                    <span className="">Active</span>
+                                </div>
+                            </div>
+                            <div className="flex justify-center gap-3">
+                                <Menubar className="p-0 shadow-none h-fit w-fit border-none">
+                                    <MenubarMenu>
+                                        <MenubarTrigger asChild>
+                                            <Button variant="outline" size="icon" className="size-8">
+                                                <Ellipsis />
+                                            </Button>
+                                        </MenubarTrigger>
+                                        <MenubarContent align="end" alignOffset={0} sideOffset={1} className="min-w-42">
+                                            <MenubarItem className="h-10 px-3"> <Info className="mr-2 size-4.5" /> View Details</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <UserRoundPen className="mr-2 size-4.5" /> Edit User</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <Trash2 className="mr-2 size-4.5" /> Remove User</MenubarItem>
+                                        </MenubarContent>
+                                    </MenubarMenu>
+                                </Menubar>
+                            </div>
+                        </div>
+                        <div
+                            // key={index}
+                            className="hover:bg-secondary grid h-11 w-full grid-cols-[repeat(5,_1fr)] items-center transition duration-200"
+                        >
+                            <div className="line-clamp-1 px-4 text-[15px]">Maria Sierra</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">Female</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">5 months</div>
+                            <div className="px-4 text-[15px]">
+                                <div className="shad ow-xs text-muted-foreground border-border flex w-fit items-center gap-2 rounded-full border px-2 py-1 text-xs font-medium">
+                                    <div className="size-2 rounded-full bg-green-600"></div>
+                                    <span className="">Active</span>
+                                </div>
+                            </div>
+                            <div className="flex justify-center gap-3">
+                                <Menubar className="p-0 shadow-none h-fit w-fit border-none">
+                                    <MenubarMenu>
+                                        <MenubarTrigger asChild>
+                                            <Button variant="outline" size="icon" className="size-8">
+                                                <Ellipsis />
+                                            </Button>
+                                        </MenubarTrigger>
+                                        <MenubarContent align="end" alignOffset={0} sideOffset={1} className="min-w-42">
+                                            <MenubarItem className="h-10 px-3"> <Info className="mr-2 size-4.5" /> View Details</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <UserRoundPen className="mr-2 size-4.5" /> Edit User</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <Trash2 className="mr-2 size-4.5" /> Remove User</MenubarItem>
+                                        </MenubarContent>
+                                    </MenubarMenu>
+                                </Menubar>
+                            </div>
+                        </div>
+                        <div
+                            // key={index}
+                            className="hover:bg-secondary grid h-11 w-full grid-cols-[repeat(5,_1fr)] items-center transition duration-200"
+                        >
+                            <div className="line-clamp-1 px-4 text-[15px]">Mary Mae</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">Female</div>
+                            <div className="line-clamp-1 px-4 text-[15px]">8 months</div>
+                            <div className="px-4 text-[15px]">
+                                <div className="shad ow-xs text-muted-foreground border-border flex w-fit items-center gap-2 rounded-full border px-2 py-1 text-xs font-medium">
+                                    <div className="size-2 rounded-full bg-green-600"></div>
+                                    <span className="">Active</span>
+                                </div>
+                            </div>
+                            <div className="flex justify-center gap-3">
+                                <Menubar className="p-0 shadow-none h-fit w-fit border-none">
+                                    <MenubarMenu>
+                                        <MenubarTrigger asChild>
+                                            <Button variant="outline" size="icon" className="size-8">
+                                                <Ellipsis />
+                                            </Button>
+                                        </MenubarTrigger>
+                                        <MenubarContent align="end" alignOffset={0} sideOffset={1} className="min-w-42">
+                                            <MenubarItem className="h-10 px-3"> <Info className="mr-2 size-4.5" /> View Details</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <UserRoundPen className="mr-2 size-4.5" /> Edit User</MenubarItem>
+                                            <MenubarItem className="h-10 px-3"> <Trash2 className="mr-2 size-4.5" /> Remove User</MenubarItem>
+                                        </MenubarContent>
+                                    </MenubarMenu>
+                                </Menubar>
+                            </div>
+                        </div>
                 </div>
             </Card>
             <div className="flex items-center px-4">
                 <div className="">
-                    <TypographySmall className="text-muted-foreground">2 of 50</TypographySmall>
+                    <TypographySmall className="text-muted-foreground">10 of 50</TypographySmall>
                 </div>
                 <div className="mt-4 ml-auto flex items-center gap-2">
                     <Button className="" variant={"outline"}>

@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { TypographyLarge, TypographySmall } from "@/components/ui/typography";
+import { TypographyH2, TypographyLarge, TypographySmall } from "@/components/ui/typography";
 import { cn } from "@/lib/utils";
 import BarangayCard from "./_components/barangay-card";
 import { Check, Loader, Mars, PillBottle, Syringe, UsersRound, Venus } from "lucide-react";
@@ -15,7 +15,32 @@ export default function Page() {
     return (
         <div className="">
             <TypographyLarge>Dashboard</TypographyLarge>
+<div className="grid grid-cols-[repeat(auto-fill,_minmax(15rem,_1fr))] gap-4 mt-5">
+                <Card className="shadow-xs rounded-sm h-22 p-3 gap-0">
+                    <TypographySmall className="font-semibold">Upcoming Immunization</TypographySmall>
+                    <TypographyH2 className="mt-3">6</TypographyH2>
+                </Card>
 
+                <Card className="shadow-xs rounded-sm h-22 p-3 gap-0">
+                    <TypographySmall className="font-semibold">Present Immunization</TypographySmall>
+                    <TypographyH2 className="mt-3">40</TypographyH2>
+                </Card>
+
+                <Card className="shadow-xs rounded-sm h-22 p-3 gap-0">
+                    <TypographySmall className="font-semibold">Absent Immunization</TypographySmall>
+                    <TypographyH2 className="mt-3">1</TypographyH2>
+                </Card>
+
+                <Card className="shadow-xs rounded-sm h-22 p-3 gap-0">
+                    <TypographySmall className="font-semibold">Vials Available</TypographySmall>
+                    <TypographyH2 className="mt-3">1</TypographyH2>
+                </Card>
+
+                <Card className="shadow-xs rounded-sm h-22 p-3 gap-0">
+                    <TypographySmall className="font-semibold">Vials to Expire</TypographySmall>
+                    <TypographyH2 className="mt-3">1</TypographyH2>
+                </Card>
+            </div>
             <div className="mt-6">
                 <div className="space-y-3 mb-6">
                     <div className="">

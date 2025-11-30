@@ -107,8 +107,8 @@ export default function Page({ searchParams }: Props) {
                                 </div>
                             </div>
                             <div className="h-12 grid grid-cols-[repeat(3,_1fr)_10rem] items-center [&>div]:px-4">
-                                <div className=""> <TypographySmall>John Doe</TypographySmall> </div>
-                                <div className=""> <TypographySmall>Montana Doe</TypographySmall> </div>
+                                <div className=""> <TypographySmall>Juan Santos</TypographySmall> </div>
+                                <div className=""> <TypographySmall> Jerry Santos</TypographySmall> </div>
                                 <div className=""> <TypographySmall>Active</TypographySmall> </div>
                                 <div className="flex items-center justify-center gap-3">
                                     {tabs === 'pending' && (<Button size="icon" className="size-8 bg-green-600 hover:bg-green-600/90">
@@ -127,8 +127,28 @@ export default function Page({ searchParams }: Props) {
                                 </div>
                             </div>
                             <div className="h-12 grid grid-cols-[repeat(3,_1fr)_10rem] items-center [&>div]:px-4">
-                                <div className=""> <TypographySmall>John Doe</TypographySmall> </div>
-                                <div className=""> <TypographySmall>Montana Doe</TypographySmall> </div>
+                                <div className=""> <TypographySmall>Miguel Villanueva</TypographySmall> </div>
+                                <div className=""> <TypographySmall>Adrian Villanueva</TypographySmall> </div>
+                                <div className=""> <TypographySmall>Active</TypographySmall> </div>
+                                <div className="flex items-center justify-center gap-3">
+                                    {tabs === 'pending' && (<Button size="icon" className="size-8 bg-green-600 hover:bg-green-600/90">
+                                        <Check />
+                                    </Button>)}
+                                    {tabs === 'all' && (
+                                        <Fragment>
+                                            <Button size="icon" variant="outline" className="size-8">
+                                                <PenLine />
+                                            </Button>
+                                            <Button size="icon" variant="outline" className="size-8">
+                                                <Eye />
+                                            </Button>
+                                        </Fragment>
+                                    )}
+                                </div>
+                            </div>
+                             <div className="h-12 grid grid-cols-[repeat(3,_1fr)_10rem] items-center [&>div]:px-4">
+                                <div className=""> <TypographySmall>Paolo Fernandez</TypographySmall> </div>
+                                <div className=""> <TypographySmall>Jericho Fernandez</TypographySmall> </div>
                                 <div className=""> <TypographySmall>Active</TypographySmall> </div>
                                 <div className="flex items-center justify-center gap-3">
                                     {tabs === 'pending' && (<Button size="icon" className="size-8 bg-green-600 hover:bg-green-600/90">
